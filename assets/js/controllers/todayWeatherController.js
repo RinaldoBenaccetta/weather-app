@@ -4,11 +4,10 @@ import { todayWeather } from "../views/todayWeather.js";
 /**
  * Get weather for next 24hours according to provided coordinates and show them in the DOM.
  * 
- * @param {Float} lat - The latitude
- * @param {Float} lon - The longitude
+ * @param {String} city
  */
-export const weatherController = async (lat, lon) => {
-    const weatherCollection = await getWeather(lat, lon)
+export const weatherController = async (city) => {
+    const weatherCollection = await getWeather(city)
 
     // call the today weather view
     todayWeather(weatherCollection.today)

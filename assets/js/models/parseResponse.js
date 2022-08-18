@@ -5,13 +5,13 @@ import { formatTemp } from "../utils/formatTemp.js"
  * Returns a collection of object ready to be used by views.
  * 
  * @param {Array} collection 
- * @param {Object} city 
+ * @param {Object} cityObject 
  * @returns {Array}
  */
-export const parseResponse = (collection, city) => {
+export const parseResponse = (collection, cityObject) => {
     const formatedArray = collection.map((day) => {
         return {
-            hour: formatHour((day.dt - city.timezone) * 1000),
+            hour: formatHour((day.dt - cityObject.timezone) * 1000),
             // provided by API timestamp is in unix
             icon: '',
             state: day.weather[0].description,

@@ -5,21 +5,21 @@ import { parseResponse } from "./parseResponse.js";
  * Query the distant API for Weather and return it parsed
  * ready to be used by view templates.
  * 
- * @param {Float} lat - The latitude
- * @param {Float} lon - The longitude
+ * @param {String} city
  * @returns {Object}
  */
-export const getWeather = async (lat, lon) => {
-    const response = await apiQuery(lat, lon)
+export const getWeather = async (city) => {
+    const response = await apiQuery(city)
 
     if (response) {
-        const list = response.list
-        const city = response.city
-        const parsedCollection = parseResponse(list, city)
-        const todayArray = todayWeather(parsedCollection)
+        const weatherCollection = response.list
+        const cityObject = response.city
+        console.log(response);
+        const parsedCollection = parseResponse(weatherCollection, cityObject)
+        const todayCollection = todayWeather(parsedCollection)
 
         return {
-            today: todayArray,
+            today: todayCollection,
             all: parsedCollection
         }
     }
