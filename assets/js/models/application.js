@@ -3,6 +3,8 @@ export const APPLICATION = {
         headerContainer: document.querySelector(this.id.header.container),
         mainContainer: document.querySelector(this.id.main.container),
         footerContainer: document.querySelector(this.id.footer.container),
+        townInput: document.querySelector(this.id.header.townInput),
+        search: document.querySelector(this.id.header.search),
     },
     id: {
         header: {
@@ -62,7 +64,8 @@ export const APPLICATION = {
     },
     externalApi: {
         key: 'f9c943a7adbe8a3ad653fe2f3d5d2794'
-    }
+    },
+    units: 'metric',
     //request: 'https://thatsthespir.it/api',
     //defaultImage: '../assets/img/avatar.jpg'
 }
