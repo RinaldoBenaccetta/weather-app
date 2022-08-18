@@ -22,6 +22,8 @@ export const getWeather = async (city) => {
             today: todayCollection,
             all: parsedCollection
         }
+    } else {
+        return false
     }
 }
 

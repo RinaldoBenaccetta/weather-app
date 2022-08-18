@@ -40,6 +40,7 @@ export const APPLICATION = {
         }
     },
     class: {
+        error: 'error',
         header: {
             container: 'header',
             townInput: 'header__town-input',
@@ -73,6 +74,7 @@ export const APPLICATION = {
         key: 'f9c943a7adbe8a3ad653fe2f3d5d2794'
     },
     units: 'metric',
+    errorTimeout: 500,
     //request: 'https://thatsthespir.it/api',
     //defaultImage: '../assets/img/avatar.jpg'
 }
