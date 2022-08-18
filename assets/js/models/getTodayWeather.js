@@ -1,6 +1,6 @@
 import { apiQuery } from "./apiQuery.js";
-import { getHour } from "./getHour.js";
-import { getTemp } from "./getTemp.js";
+import { formatHour } from "./formatHour.js";
+import { formatTemp } from "./formatTemp.js";
 
 export const getTodayWeather = async (lat, lon) => {
     const response = await apiQuery(lat, lon)
@@ -20,11 +20,11 @@ const parseResponse = (response) => {
 
     const formatedArray = todayArray.map((day) => {
         return {
-            hour: getHour((day.dt - city.timezone) * 1000),// provided timestamp is in unix
+            hour: formatHour((day.dt - city.timezone) * 1000),// provided timestamp is in unix
             icon: '',
             state: day.weather[0].description,
-            temp: getTemp(day.main.temp),
-            feel: getTemp(day.main.feels_like),
+            temp: formatTemp(day.main.temp),
+            feel: formatTemp(day.main.feels_like),
         }
     })
 

@@ -1,4 +1,4 @@
-export const getHour = (date) => {
+export const formatHour = (date) => {
     const thisDate = new Date(date)
     const hour = thisDate.getHours()
 
