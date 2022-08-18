@@ -9,5 +9,6 @@ export const apiQuery = async (lat, lon) => {
 
     } catch (error) {
         console.error(error)
+        return false
     }
 }
