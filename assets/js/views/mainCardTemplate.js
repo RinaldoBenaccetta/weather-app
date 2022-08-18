@@ -1,6 +1,6 @@
-import { APPLICATION } from "../models/application.js";
+import { APPLICATION } from "../models/application.js"
 
-const mainCardTemplate = (data, id) => {
+export const mainCardTemplate = (data, id) => {
     const CLASS = APPLICATION.class.main.card
     const ID = APPLICATION.id.main.card
 
