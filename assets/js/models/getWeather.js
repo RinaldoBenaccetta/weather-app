@@ -12,10 +12,12 @@ export const getWeather = async (lat, lon) => {
     const response = await apiQuery(lat, lon)
 
     if (response) {
-        const todayArray = todayWeather(response.list)
+        const list = response.list
         const city = response.city
+        const parsedCollection = parseResponse(list, city)
+        const todayArray = todayWeather(parsedCollection)
 
-        return parseResponse(todayArray, city)
+        return todayArray
     }
 }
 
