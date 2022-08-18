@@ -1,5 +1,5 @@
 import { apiQuery } from "./models/apiQuery.js"
-import { weatherController } from "./controllers/todayWeatherController.js"
+import { weatherController } from "./controllers/weatherController.js"
 
 import { searchButtonListener } from "./controllers/searchButtonListener.js"
 

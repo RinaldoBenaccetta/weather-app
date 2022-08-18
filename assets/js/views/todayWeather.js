@@ -1,6 +1,6 @@
 import { mainCard } from "../views/mainCard.js"
 import { formatId } from "../utils/formatId.js"
-import { flushMainContainer } from "./flushMainContainer.js";
+// import { flushMainContainer } from "./flushMainContainer.js"
 
 /**
  * Show 8 cards in DOM, each card represent 3 hours of prediction.
@@ -10,7 +10,7 @@ import { flushMainContainer } from "./flushMainContainer.js";
  *                one object by 3 hours.
  */
 export const todayWeather = (weatherCollection) => {
-    flushMainContainer()
+    // flushMainContainer()
 
     weatherCollection.forEach((time, index) => {
         mainCard(time, formatId(index, 2))
