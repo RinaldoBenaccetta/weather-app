@@ -1,6 +1,6 @@
 import { apiQuery } from "./apiQuery.js";
-import { formatHour } from "./formatHour.js";
-import { formatTemp } from "./formatTemp.js";
+import { formatHour } from "../utils/formatHour.js";
+import { formatTemp } from "../utils/formatTemp.js";
 
 export const getTodayWeather = async (lat, lon) => {
     const response = await apiQuery(lat, lon)
