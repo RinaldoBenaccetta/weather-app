@@ -1,10 +1,10 @@
 export const APPLICATION = {
     element: {
-        headerContainer: document.querySelector(this.id.header.container),
-        mainContainer: document.querySelector(this.id.main.container),
-        footerContainer: document.querySelector(this.id.footer.container),
-        townInput: document.querySelector(this.id.header.townInput),
-        search: document.querySelector(this.id.header.search),
+        headerContainer() { document.querySelector(this.id.header.container) },
+        mainContainer() { document.querySelector(this.id.main.container) },
+        footerContainer() { document.querySelector(this.id.footer.container) },
+        townInput() { document.querySelector(this.id.header.townInput) },
+        search() { document.querySelector(this.id.header.search) },
     },
     id: {
         header: {
