@@ -1,5 +1,6 @@
 import { apiQuery } from "./apiQuery.js";
 import { getHour } from "./getHour.js";
+import { getTemp } from "./getTemp.js";
 
 export const getTodayWeather = async (lat, lon) => {
     const response = await apiQuery(lat, lon)
@@ -17,8 +18,8 @@ const parseResponse = (response) => {
             hour: getHour(day.dt),
             icon: '',
             state: day.weather[0].description,
-            temp: day.main.temp,
-            feel: day.main.feels_like,
+            temp: getTemp(day.main.temp),
+            feel: getTemp(day.main.feels_like),
         }
     })
 
