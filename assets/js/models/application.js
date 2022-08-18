@@ -19,6 +19,8 @@ export const APPLICATION = {
                 hour: '#main-card-hour-',
                 icon: '#main-card-icon-',
                 state: '#main-card-state-',
+                temp: '#main-card-temp-',
+                feel: '#main-card-feel-',
             }
 
         },
@@ -47,6 +49,8 @@ export const APPLICATION = {
                 hour: 'main__card__hour',
                 icon: 'main__card__icon',
                 state: 'main__card__state',
+                temp: 'main__card__temperature',
+                feel: 'main__card__feel-temperature',
             }
 
         },
