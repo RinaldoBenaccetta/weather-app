@@ -6,7 +6,10 @@ export const showTodayWeather = async (lat, lon) => {
     const todayWeather = await getTodayWeather(lat, lon)
 
     // console.log(todayWeather);
+    todayWeather.forEach((time, index) => {
+        mainCard(time, formatId(index, 2))
+    });
 
     // test with first
-    mainCard(todayWeather[0], formatId(1, 2))
+
 }
