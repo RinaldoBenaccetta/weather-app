@@ -7,9 +7,9 @@ import { todayWeather } from "../views/todayWeather.js";
  * @param {Float} lat - The latitude
  * @param {Float} lon - The longitude
  */
-export const todayWeatherController = async (lat, lon) => {
+export const weatherController = async (lat, lon) => {
     const weatherCollection = await getWeather(lat, lon)
 
-    // call the view
-    todayWeather(weatherCollection)
+    // call the today weather view
+    todayWeather(weatherCollection.today)
 }
