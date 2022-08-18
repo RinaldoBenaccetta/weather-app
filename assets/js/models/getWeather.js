@@ -8,15 +8,22 @@ import { parseResponse } from "./parseResponse.js";
  * @param {Float} lon - The longitude
  * @returns {Array}
  */
-export const getTodayWeather = async (lat, lon) => {
+export const getWeather = async (lat, lon) => {
     const response = await apiQuery(lat, lon)
 
     if (response) {
-        // Get the 8 first object :
-        // each object represent 3 hours, so 8 * 3 = 24 hours
-        const todayArray = response.list.slice(0, 8)
+        const todayArray = todayWeather(response.list)
         const city = response.city
 
         return parseResponse(todayArray, city)
     }
 }
+
+/**
+ * Returns a collection representing 24 hours of prediction
+ * by slice of 3 hours, so an array of 8 objects.
+ * 
+ * @param {Array} collection 
+ * @returns {Array}
+ */
+const todayWeather = collection => collection.slice(0, 8)

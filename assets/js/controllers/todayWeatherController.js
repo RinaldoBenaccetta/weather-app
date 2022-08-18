@@ -1,4 +1,4 @@
-import { getTodayWeather } from "../models/getTodayWeather.js"
+import { getWeather } from "../models/getWeather.js"
 import { todayWeather } from "../views/todayWeather.js";
 
 /**
@@ -8,7 +8,7 @@ import { todayWeather } from "../views/todayWeather.js";
  * @param {Float} lon - The longitude
  */
 export const todayWeatherController = async (lat, lon) => {
-    const weatherCollection = await getTodayWeather(lat, lon)
+    const weatherCollection = await getWeather(lat, lon)
 
     // call the view
     todayWeather(weatherCollection)
