@@ -1,5 +1,6 @@
 import { formatHour } from "../utils/formatHour.js"
 import { formatTemp } from "../utils/formatTemp.js"
+import { formatIcon } from "../utils/formatIcon.js";
 
 /**
  * Returns a collection of object ready to be used by views.
@@ -11,9 +12,9 @@ import { formatTemp } from "../utils/formatTemp.js"
 export const parseResponse = (collection, cityObject) => {
     const formatedArray = collection.map((day) => {
         return {
-            hour: formatHour((day.dt - cityObject.timezone) * 1000),
             // provided by API timestamp is in unix
-            icon: '',
+            hour: formatHour((day.dt - cityObject.timezone) * 1000),
+            icon: formatIcon(day.weather[0].icon),
             state: day.weather[0].description,
             temp: formatTemp(day.main.temp),
             feel: formatTemp(day.main.feels_like),
