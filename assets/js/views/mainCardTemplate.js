@@ -1,5 +1,12 @@
 import { APPLICATION } from "../models/application.js"
 
+/**
+ * Returns a string containing the HTML of a card, populated with provided datas.
+ * 
+ * @param {Object} data 
+ * @param {String} id 
+ * @returns {String}
+ */
 export const mainCardTemplate = (data, id) => {
     const CLASS = APPLICATION.class.main.card
     const ID = APPLICATION.id.main.card

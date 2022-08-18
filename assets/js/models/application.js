@@ -1,3 +1,6 @@
+/**
+ * An object containg application datas.
+ */
 export const APPLICATION = {
     element: {
         headerContainer() { document.querySelector(this.id.header.container) },
