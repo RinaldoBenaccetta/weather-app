@@ -21,13 +21,17 @@ export const APPLICATION = {
         },
         main: {
             container: '#main',
-            card: {
-                container: '#main-card-',
-                hour: '#main-card-hour-',
-                icon: '#main-card-icon-',
-                state: '#main-card-state-',
-                temp: '#main-card-temp-',
-                feel: '#main-card-feel-',
+            localisation: "#localisation",
+            cards: {
+                container: '#today-cards-container',
+                card: {
+                    container: '#main-card-',
+                    hour: '#main-card-hour-',
+                    icon: '#main-card-icon-',
+                    state: '#main-card-state-',
+                    temp: '#main-card-temp-',
+                    feel: '#main-card-feel-',
+                }
             }
 
         },

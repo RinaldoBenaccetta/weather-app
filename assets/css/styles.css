@@ -332,7 +332,7 @@ body {
   height: 85%;
 }
 
-.main {
+.main__cards-container {
   display: flex;
   list-style: none;
   overflow: auto;

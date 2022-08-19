@@ -9,7 +9,7 @@ import { APPLICATION } from "../models/application.js"
  */
 export const mainCardTemplate = (data, id) => {
     const CLASS = APPLICATION.class.main.card
-    const ID = APPLICATION.id.main.card
+    const ID = APPLICATION.id.main.cards.card
 
     return `<div class="${CLASS.container}" id="${ID.container}-${id}">
                 <div class="${CLASS.hour}" id="${ID.hour}-${id}">${data.hour}</div>

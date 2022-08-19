@@ -1,9 +1,11 @@
 // carousel found here : https://pawelgrzybek.com/a-simple-carousel-with-a-few-lines-of-css/
 .main {
-    display: flex;
-    list-style: none;
-    overflow: auto;
-    scroll-snap-type: x mandatory;
+    &__cards-container {
+        display: flex;
+        list-style: none;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+    }
 
     &__card {
         flex-shrink: 0;
