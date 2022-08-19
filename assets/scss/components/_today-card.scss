@@ -20,13 +20,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: space-around;
-
-        background-color: pink;
 
         &:first-child {
             margin-left: 25%;
-            background-color: red;
+            background-color: $color_primary_lighter;
         }
 
         &:last-child {
@@ -37,25 +34,35 @@
             font-size: $font_size_large;
 
             margin: $margin_default 0;
+
+            color: $color_primary_dark;
+
+            // font-weight: 600;
         }
 
         &__icon {
         }
 
         &__state {
+            font-size: $font_size_small;
         }
 
         &__temperature {
             font-size: $font_size_xl;
 
-            margin: $margin_default 0;
+            margin: $margin_large 0;
+            color: $color_primary_darker;
         }
 
         &__feel-label {
+            color: $color_primary_dark;
+
+            font-weight: 600;
         }
 
         &__feel-temperature {
             font-size: $font_size_xl;
+            color: $color_primary_dark;
         }
     }
 }

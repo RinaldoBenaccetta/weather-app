@@ -11,16 +11,12 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-
-        background-color: green;
     }
 
     &__search {
         display: flex;
         height: $default_font_size * 1.5;
         justify-content: center;
-
-        background-color: blue;
     }
 
     &__search-label {
@@ -29,6 +25,9 @@
         font-size: $font_size_small;
 
         padding-bottom: $font_size_small * 0.25;
+
+        color: $color_primary_dark;
+        font-weight: 600;
     }
 
     &__town-input {
@@ -39,16 +38,34 @@
         margin: 0;
         padding: 0.5rem;
 
-        border: $border_size_default solid red;
         border-radius: $border_radius 0 0 $border_radius;
+        border: $border_size_default solid $color_primary_dark;
+        outline: none;
+
+        background-color: $color-white;
 
         align-self: flex-start;
+
+        &:focus {
+            border-color: $color_primary_darker;
+        }
+
+        &:focus + .header__button {
+            border-color: $color_primary_darker;
+            background-color: $color_primary_darker;
+        }
     }
 
     &__button {
         margin: 0;
 
-        border: $border_size_default solid red;
         border-radius: 0 $border_radius $border_radius 0;
+        border: $border_size_default solid $color_primary_dark;
+
+        outline: none;
+
+        background-color: $color_primary_dark;
+
+        color: $color-white;
     }
 }

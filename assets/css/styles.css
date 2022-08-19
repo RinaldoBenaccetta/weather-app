@@ -318,20 +318,18 @@ body {
 body {
   width: 100vw;
   height: 100vh;
+  background-color: rgb(249, 255, 255);
+  color: rgb(1, 34, 32);
 }
 
 .header {
   width: 100%;
   height: 15%;
-  outline-color: yellow;
-  background-color: lightgoldenrodyellow;
 }
 
 .main {
   width: 100%;
   height: 85%;
-  outline-color: orange;
-  background-color: lightblue;
 }
 
 .main {
@@ -350,11 +348,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: pink;
 }
 .main__card:first-child {
   margin-left: 25%;
-  background-color: red;
+  background-color: rgb(224, 253, 252);
 }
 .main__card:last-child {
   margin-right: 25%;
@@ -362,13 +359,23 @@ body {
 .main__card__hour {
   font-size: 1.75rem;
   margin: 1.25rem 0;
+  color: rgb(3, 134, 128);
+}
+.main__card__state {
+  font-size: 0.9rem;
 }
 .main__card__temperature {
   font-size: 2.5rem;
-  margin: 1.25rem 0;
+  margin: 1.875rem 0;
+  color: rgb(1, 34, 32);
+}
+.main__card__feel-label {
+  color: rgb(3, 134, 128);
+  font-weight: 600;
 }
 .main__card__feel-temperature {
   font-size: 2.5rem;
+  color: rgb(3, 134, 128);
 }
 
 .header {
@@ -382,32 +389,44 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: green;
 }
 .header__search {
   display: flex;
   height: 1.875rem;
   justify-content: center;
-  background-color: blue;
 }
 .header__search-label {
   padding-left: 0.625rem;
-  font-size: 1rem;
-  padding-bottom: 0.25rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.225rem;
+  color: rgb(3, 134, 128);
+  font-weight: 600;
 }
 .header__town-input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
   padding: 0.5rem;
-  border: 2px solid red;
   border-radius: 0.625rem 0 0 0.625rem;
+  border: 2px solid rgb(3, 134, 128);
+  outline: none;
+  background-color: rgb(249, 255, 255);
   align-self: flex-start;
+}
+.header__town-input:focus {
+  border-color: rgb(1, 34, 32);
+}
+.header__town-input:focus + .header__button {
+  border-color: rgb(1, 34, 32);
+  background-color: rgb(1, 34, 32);
 }
 .header__button {
   margin: 0;
-  border: 2px solid red;
   border-radius: 0 0.625rem 0.625rem 0;
+  border: 2px solid rgb(3, 134, 128);
+  outline: none;
+  background-color: rgb(3, 134, 128);
+  color: rgb(249, 255, 255);
 }
 
 .clear-sky {
@@ -467,25 +486,4 @@ body {
   background: black;
   -webkit-mask-size: cover;
   mask-size: cover;
-}
-
-.icon {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  background: black;
-  mask-size: cover;
-}
-
-.icon:hover,
-.icon:focus {
-  background: red;
-}
-
-body {
-  background-color: green;
-}
-
-* {
-  outline: 1px solid red;
 }/*# sourceMappingURL=styles.css.map */

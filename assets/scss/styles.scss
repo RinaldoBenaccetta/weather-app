@@ -1,6 +1,6 @@
-@import 'vendor/normalize', 'variables/variables', 'variables/variables',
-    'mixins/mixins', 'fonts/fonts', 'layout/layout', 'components/today-card',
-    'components/search-bar', 'components/icons';
+@import 'vendor/normalize', 'variables/variables', 'variables/colors',
+    'variables/variables', 'mixins/mixins', 'fonts/fonts', 'layout/layout',
+    'components/today-card', 'components/search-bar', 'components/icons';
 
 @if $dev == true {
     body {
