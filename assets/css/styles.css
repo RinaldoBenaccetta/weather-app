@@ -348,6 +348,21 @@ body {
   margin-right: 25%;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__search-container {
+  align-self: center;
+  width: 90%;
+  height: 50%;
+  display: flex;
+  background-color: green;
+}
+.header__town-input {
+  height: 100%;
+}
+
 body {
   background-color: green;
 }
