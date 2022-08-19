@@ -346,6 +346,10 @@ body {
   height: 75%;
   margin: 12.5% 1rem 12.5% 1rem;
   scroll-snap-align: center;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: pink;
 }
 .main__card:first-child {
@@ -354,6 +358,17 @@ body {
 }
 .main__card:last-child {
   margin-right: 25%;
+}
+.main__card__hour {
+  font-size: 1.75rem;
+  margin: 1.25rem 0;
+}
+.main__card__temperature {
+  font-size: 2.5rem;
+  margin: 1.25rem 0;
+}
+.main__card__feel-temperature {
+  font-size: 2.5rem;
 }
 
 .header {
@@ -377,8 +392,8 @@ body {
 }
 .header__search-label {
   padding-left: 0.625rem;
-  font-size: 0.95rem;
-  padding-bottom: 0.2375rem;
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
 }
 .header__town-input {
   box-sizing: border-box;

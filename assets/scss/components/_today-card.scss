@@ -15,6 +15,13 @@
 
         scroll-snap-align: center;
 
+        border-radius: $border_radius;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: space-around;
+
         background-color: pink;
 
         &:first-child {
@@ -24,6 +31,31 @@
 
         &:last-child {
             margin-right: 25%;
+        }
+
+        &__hour {
+            font-size: $font_size_large;
+
+            margin: $margin_default 0;
+        }
+
+        &__icon {
+        }
+
+        &__state {
+        }
+
+        &__temperature {
+            font-size: $font_size_xl;
+
+            margin: $margin_default 0;
+        }
+
+        &__feel-label {
+        }
+
+        &__feel-temperature {
+            font-size: $font_size_xl;
         }
     }
 }
