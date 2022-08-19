@@ -4,4 +4,4 @@
  * @param {Number|String} temp 
  * @returns {String}
  */
-export const formatTemp = temp => `${temp}°`
+export const formatTemp = temp => `${Math.round(temp)}°`

@@ -30,6 +30,12 @@
         font-weight: 600;
     }
 
+    &__town-input,
+    &__button {
+        transition: background-color $animation_time_default,
+            color $animation_time_default, border $animation_time_default;
+    }
+
     &__town-input {
         box-sizing: border-box;
 

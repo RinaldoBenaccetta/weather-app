@@ -402,6 +402,9 @@ body {
   color: rgb(3, 134, 128);
   font-weight: 600;
 }
+.header__town-input, .header__button {
+  transition: background-color 0.1s, color 0.1s, border 0.1s;
+}
 .header__town-input {
   box-sizing: border-box;
   height: 100%;
