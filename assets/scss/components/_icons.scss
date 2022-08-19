@@ -1,0 +1,75 @@
+.clear-sky {
+    -webkit-mask-image: url(../img/clear_sky.svg);
+    mask-image: url(../img/clear_sky.svg);
+}
+
+.few-clouds {
+    -webkit-mask-image: url(../img/few_clouds.svg);
+    mask-image: url(../img/few_clouds.svg);
+}
+
+.scattered-clouds {
+    -webkit-mask-image: url(../img/scattered_clouds.svg);
+    mask-image: url(../img/scattered_clouds.svg);
+}
+
+.broken-clouds {
+    -webkit-mask-image: url(../img/broken_clouds.svg);
+    mask-image: url(../img/broken_clouds.svg);
+}
+
+.shower-rain {
+    -webkit-mask-image: url(../img/shower_rain.svg);
+    mask-image: url(../img/shower_rain.svg);
+}
+
+.rain {
+    -webkit-mask-image: url(../img/rain.svg);
+    mask-image: url(../img/rain.svg);
+}
+
+.thunderstorm {
+    -webkit-mask-image: url(../img/thunderstorm.svg);
+    mask-image: url(../img/thunderstorm.svg);
+}
+
+.snow {
+    -webkit-mask-image: url(../img/snow.svg);
+    mask-image: url(../img/snow.svg);
+}
+
+.mist {
+    -webkit-mask-image: url(../img/mist.svg);
+    mask-image: url(../img/mist.svg);
+}
+
+.na {
+    -webkit-mask-image: url(../img/na.svg);
+    mask-image: url(../img/na.svg);
+}
+
+.main__card__icon {
+    display: inline-block;
+    width: $icon_size_large;
+    height: $icon_size_large;
+    background: black;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+    //     -webkit-mask-image: url(w3logo.png);
+    //   mask-image: url(w3logo.png);
+    //   -webkit-mask-repeat: no-repeat;
+    //   mask-repeat: no-repeat;
+}
+
+.icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: black;
+    mask-size: cover;
+}
+.icon:hover,
+.icon:focus {
+    background: red;
+}
