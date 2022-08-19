@@ -341,7 +341,7 @@ body {
 .main__card {
   flex-shrink: 0;
   width: 50%;
-  height: 75%;
+  height: 60%;
   margin: 12.5% 1rem 12.5% 1rem;
   scroll-snap-align: center;
   border-radius: 0.625rem;
@@ -376,6 +376,7 @@ body {
 .main__card__feel-temperature {
   font-size: 2.5rem;
   color: rgb(3, 134, 128);
+  padding-bottom: 1.25rem;
 }
 
 .header {
