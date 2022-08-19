@@ -363,12 +363,36 @@ body {
 .header__search-container {
   align-self: center;
   width: 90%;
-  height: 50%;
+  height: 3.75rem;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   background-color: green;
 }
+.header__search {
+  display: flex;
+  height: 1.875rem;
+  justify-content: center;
+  background-color: blue;
+}
+.header__search-label {
+  padding-left: 0.625rem;
+  font-size: 0.95rem;
+  padding-bottom: 0.2375rem;
+}
 .header__town-input {
+  box-sizing: border-box;
   height: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  border: 2px solid red;
+  border-radius: 0.625rem 0 0 0.625rem;
+  align-self: flex-start;
+}
+.header__button {
+  margin: 0;
+  border: 2px solid red;
+  border-radius: 0 0.625rem 0.625rem 0;
 }
 
 body {
