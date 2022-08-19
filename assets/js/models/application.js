@@ -62,6 +62,7 @@ export const APPLICATION = {
                 state: 'main__card__state',
                 temp: 'main__card__temperature',
                 feel: 'main__card__feel-temperature',
+                feelLabel: 'main__card__feel-label',
             }
 
         },

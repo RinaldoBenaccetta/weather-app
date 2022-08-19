@@ -1,0 +1,29 @@
+// carousel found here : https://pawelgrzybek.com/a-simple-carousel-with-a-few-lines-of-css/
+.main {
+    display: flex;
+    list-style: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+
+    &__card {
+        flex-shrink: 0;
+
+        width: 50%;
+        height: 75%;
+
+        margin: 12.5% 1rem 12.5% 1rem;
+
+        scroll-snap-align: center;
+
+        background-color: pink;
+
+        &:first-child {
+            margin-left: 25%;
+            background-color: red;
+        }
+
+        &:last-child {
+            margin-right: 25%;
+        }
+    }
+}

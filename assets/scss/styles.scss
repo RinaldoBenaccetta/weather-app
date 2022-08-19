@@ -1,5 +1,5 @@
 @import 'vendor/normalize', 'variables/variables', 'variables/variables',
-    'mixins/mixins', 'fonts/fonts';
+    'mixins/mixins', 'fonts/fonts', 'layout/layout', 'components/today-card';
 
 @if $dev == true {
     body {
