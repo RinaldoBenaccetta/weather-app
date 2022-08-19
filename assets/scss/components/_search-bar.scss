@@ -47,31 +47,51 @@
         border-radius: $border_radius 0 0 $border_radius;
         border: $border_size_default solid $color_primary_dark;
         outline: none;
+        border-right: none;
 
         background-color: $color-white;
 
         align-self: flex-start;
 
-        &:focus {
+        // &:focus {
+        //     border-color: $color_primary_darker;
+        // }
+
+        &:focus,
+        &:focus + .header__button {
             border-color: $color_primary_darker;
+            //background-color: $color_primary_darker;
         }
 
         &:focus + .header__button {
-            border-color: $color_primary_darker;
             background-color: $color_primary_darker;
+            color: $color-white;
         }
     }
 
     &__button {
         margin: 0;
+        padding: 0 $margin_small;
 
         border-radius: 0 $border_radius $border_radius 0;
         border: $border_size_default solid $color_primary_dark;
+        border-left: none;
 
         outline: none;
 
-        background-color: $color_primary_dark;
+        background-color: $color_white;
 
-        color: $color-white;
+        color: $color_primary_darker;
+
+        &:active {
+            background-color: $color_primary_light;
+            border-color: $color_primary_light;
+            color: $color_primary_darker;
+        }
+
+        &:active + .header__town-input {
+            background-color: $color_primary_darker;
+            color: $color-white;
+        }
     }
 }
