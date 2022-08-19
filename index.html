@@ -13,15 +13,23 @@
     </head>
     <body>
         <header class="header" id="header">
-            <input
-                type="text"
-                name="town-input"
-                id="town-input"
-                class="header__town-input"
-            />
-            <button class="header__button" id="town-search-button">
-                Trouve
-            </button>
+            <div class="header__search-container" id="search-container">
+                <label
+                    class="header__search-label"
+                    for="town-input"
+                    id="search-label"
+                    >City:
+                </label>
+                <input
+                    type="text"
+                    name="city"
+                    id="town-input"
+                    class="header__town-input"
+                />
+                <button class="header__button" id="town-search-button">
+                    Find
+                </button>
+            </div>
         </header>
         <main class="main" id="main">
             <!-- <div class="main__card" id="main-card-01">

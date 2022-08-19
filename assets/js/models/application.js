@@ -12,8 +12,12 @@ export const APPLICATION = {
     id: {
         header: {
             container: '#header',
-            townInput: '#town-input',
-            search: '#town-search-button',
+            searchContainer: {
+                container: '#search-container',
+                townInput: '#town-input',
+                search: '#town-search-button',
+            }
+
         },
         main: {
             container: '#main',
@@ -43,8 +47,11 @@ export const APPLICATION = {
         error: 'error',
         header: {
             container: 'header',
-            townInput: 'header__town-input',
-            search: 'header__button',
+            searchContainer: {
+                container: 'header__search-container',
+                townInput: 'header__town-input',
+                search: 'header__button',
+            }
         },
         main: {
             container: 'main',
