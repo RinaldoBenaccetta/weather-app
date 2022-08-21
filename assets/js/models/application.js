@@ -59,6 +59,7 @@ export const APPLICATION = {
         },
         main: {
             container: 'main',
+            localisation: 'main__lacalisation',
             card: {
                 container: 'main__card',
                 hour: 'main__card__hour',

@@ -342,7 +342,7 @@ body {
   flex-shrink: 0;
   width: 50%;
   height: 60%;
-  margin: 12.5% 1rem 12.5% 1rem;
+  margin: 12.5% 0.5rem 12.5% 0.5rem;
   scroll-snap-align: center;
   border-radius: 0.625rem;
   display: flex;
