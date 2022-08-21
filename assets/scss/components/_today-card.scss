@@ -10,8 +10,12 @@
     &__card {
         flex-shrink: 0;
 
+        box-sizing: border-box;
+
         width: 50%;
         height: 60%;
+
+        text-align: center;
 
         // margin: 12.5% 1rem 12.5% 1rem;
         margin: 12.5% 0.5rem 12.5% 0.5rem;
@@ -23,6 +27,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        padding: $margin_large $margin_default;
 
         &:first-child {
             margin-left: 25%;
@@ -36,7 +42,7 @@
         &__hour {
             font-size: $font_size_large;
 
-            margin: $margin_default 0;
+            //margin: $margin_default 0;
 
             color: $color_primary_dark;
 
@@ -48,26 +54,30 @@
 
         &__state {
             font-size: $font_size_small;
+            // text-align: center;
         }
 
         &__temperature {
             font-size: $font_size_xl;
 
-            margin: $margin_large 0;
+            margin: $margin_large 0 $margin_large $margin_default;
             color: $color_primary_darker;
         }
 
         &__feel-label {
             color: $color_primary_dark;
 
+            font-size: $font_size_small;
             font-weight: 600;
         }
 
         &__feel-temperature {
             font-size: $font_size_xl;
+            margin-left: $margin_default;
+
             color: $color_primary_dark;
 
-            padding-bottom: $margin_default;
+            // padding-bottom: $margin_default;
         }
     }
 }
