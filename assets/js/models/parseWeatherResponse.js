@@ -9,7 +9,7 @@ import { formatIcon } from "../utils/formatIcon.js";
  * @param {Object} cityObject 
  * @returns {Array}
  */
-export const parseResponse = (collection, cityObject) => {
+export const parseWeatherResponse = (collection, cityObject) => {
     const formatedArray = collection.map((day) => {
         return {
             // provided by API timestamp is in unix

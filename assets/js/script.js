@@ -3,6 +3,8 @@
 
 // import { encodeInput } from "./utils/encodeInput.js";
 
+import { getAutocomplete } from "./models/getAutocomplete.js";
+
 import { searchButtonListener } from "./controllers/searchButtonListener.js"
 
 // try bxl query
@@ -12,6 +14,8 @@ import { searchButtonListener } from "./controllers/searchButtonListener.js"
 // weatherController('bruxelles')
 
 searchButtonListener()
+
+console.log(getAutocomplete("bru"));
 // console.log(encodeInput("<div>hello</div>"));
 
 // const test = 'https://api.teleport.org/api/cities/?search=Bruxelles'

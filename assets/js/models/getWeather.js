@@ -1,5 +1,5 @@
 import { weatherQuery } from "./weatherQuery.js"
-import { parseResponse } from "./parseResponse.js";
+import { parseWeatherResponse } from "./parseWeatherResponse.js";
 
 /**
  * Query the distant API for Weather and return it parsed
@@ -14,8 +14,8 @@ export const getWeather = async (city) => {
     if (response) {
         const weatherCollection = response.list
         const cityObject = response.city
-        console.log(response);
-        const parsedCollection = parseResponse(weatherCollection, cityObject)
+        // console.log(response);
+        const parsedCollection = parseWeatherResponse(weatherCollection, cityObject)
         const todayCollection = todayWeather(parsedCollection)
 
         return {

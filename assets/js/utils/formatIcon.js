@@ -1,6 +1,6 @@
 
 export const formatIcon = (icon) => {
-    console.log(icon);
+    // console.log(icon);
     const iconNumber = icon.slice(0, 2)
 
     switch (iconNumber) {
