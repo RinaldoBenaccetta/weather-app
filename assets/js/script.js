@@ -1,5 +1,7 @@
-import { apiQuery } from "./models/apiQuery.js"
-import { weatherController } from "./controllers/weatherController.js"
+// import { apiQuery } from "./models/apiQuery.js"
+// import { weatherController } from "./controllers/weatherController.js"
+
+// import { encodeInput } from "./utils/encodeInput.js";
 
 import { searchButtonListener } from "./controllers/searchButtonListener.js"
 
@@ -10,6 +12,7 @@ import { searchButtonListener } from "./controllers/searchButtonListener.js"
 // weatherController('bruxelles')
 
 searchButtonListener()
+// console.log(encodeInput("<div>hello</div>"));
 
 // const test = 'https://api.teleport.org/api/cities/?search=Bruxelles'
 
