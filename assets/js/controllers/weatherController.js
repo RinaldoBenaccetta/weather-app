@@ -5,6 +5,7 @@ import { flushCardsContainer } from "../views/flushCardsContainer.js"
 import { flushWeatherIn } from "../views/flushWeatherIn.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js"
+import { toggleAutocomplete } from "../utils/toggleAutocomplete.js";
 
 /**
  * Get weather for next 24hours according to provided city
@@ -37,9 +38,9 @@ const WeatherReturn = (weatherCollection, city) => {
  */
 const WeatherReturnError = () => {
     const errorClass = APPLICATION.class.error
-    const inputElement = APPLICATION.id.header.townInput
+    const inputElement = APPLICATION.id.header.searchContainer.townInput
     const timer = APPLICATION.errorTimeout
 
+    toggleAutocomplete()
     classTimeout(errorClass, inputElement, timer)
-
 }
