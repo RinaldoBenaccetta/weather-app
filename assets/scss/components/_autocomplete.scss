@@ -10,7 +10,6 @@
 
         width: 100%;
 
-        // top: 100%;
         top: calc(100% - $border_radius);
         left: 0;
         right: 0;
@@ -22,13 +21,14 @@
 
         z-index: 10;
 
-        outline-color: yellow;
+        &.hidden {
+            display: none;
+        }
 
         &__list {
             list-style-type: none;
 
             padding: $margin_small;
-            // padding-left: 0;
         }
     }
 }

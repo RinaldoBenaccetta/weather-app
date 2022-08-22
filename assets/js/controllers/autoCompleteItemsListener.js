@@ -1,6 +1,7 @@
 import { APPLICATION } from "../models/application.js"
 // import { flushAutocomplete } from "../views/flushAutocomplete.js"
 import { cityFindHandler } from "./searchButtonListener.js"
+import { toggleAutocomplete } from "../utils/toggleAutocomplete.js"
 
 /**
  * Add a listener to the provided element
@@ -22,6 +23,7 @@ export const autoCompleteItemsListener = (item) => {
 const autoCompleteItemsHandler = (element) => {
     const newValue = getAutocompleteItemValue(element)
 
+    toggleAutocomplete()
     replaceSearchByAutocomplete(newValue)
     cityFindHandler()
 }

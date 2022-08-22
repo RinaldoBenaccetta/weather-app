@@ -466,7 +466,9 @@ body {
   border-top: none;
   background-color: rgb(249, 255, 255);
   z-index: 10;
-  outline-color: yellow;
+}
+.header__autocomplete.hidden {
+  display: none;
 }
 .header__autocomplete__list {
   list-style-type: none;
@@ -532,6 +534,9 @@ body {
   mask-size: cover;
 }
 
+.main__localisation {
+  padding: 0 1.25rem;
+}
 .main__localisation__container {
   text-align: center;
   font-size: 1.75rem;

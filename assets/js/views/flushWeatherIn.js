@@ -6,8 +6,6 @@ import { APPLICATION } from "../models/application.js"
 export const flushWeatherIn = () => {
     const container = document.querySelector(APPLICATION.id.main.localisation)
 
-    console.log(container);
-
     if (container) {
         container.innerHTML = ''
     }

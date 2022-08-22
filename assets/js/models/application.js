@@ -92,7 +92,8 @@ export const APPLICATION = {
                 minTemp: 'footer__card__min-temperature',
                 maxTemp: 'footer__card__max-temperature',
             }
-        }
+        },
+        hidden: 'hidden',
     },
     externalApi: {
         key: 'f9c943a7adbe8a3ad653fe2f3d5d2794'
