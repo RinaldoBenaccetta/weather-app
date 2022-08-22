@@ -8,15 +8,15 @@
 
         position: absolute;
 
-        // width: $search_container_size;
         width: 100%;
 
-        top: 100%;
+        // top: 100%;
+        top: calc(100% - $border_radius);
         left: 0;
         right: 0;
 
-        // top: $margin_small;
-        //left: -$margin_large;
+        border: $border_size_default solid $color_primary_darker;
+        border-top: none;
 
         background-color: $color-white;
 
