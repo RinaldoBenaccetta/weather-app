@@ -8,12 +8,11 @@ import { flushAutocomplete } from "../views/flushAutocomplete.js"
  */
 export const autoCompleteController = async () => {
     const searchInputValue = getInput()
-    console.log(searchInputValue);
-
     const autocompleteArray = await getAutocomplete(searchInputValue)
+
     flushAutocomplete()
-    autocomplete(autocompleteArray)
 
-    console.log(autocompleteArray);
-
+    if (autocompleteArray.length > 0) {
+        autocomplete(autocompleteArray)
+    }
 }
