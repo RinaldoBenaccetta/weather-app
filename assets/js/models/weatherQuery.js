@@ -8,7 +8,7 @@ import { cityWeatherRequest } from "./request.js"
  * @param {String} city
  * @returns {Object|False} 
  */
-export const apiQuery = async (city) => {
+export const weatherQuery = async (city) => {
     try {
         const response = await fetch(cityWeatherRequest(city))
         const jsonResponse = await response.json()

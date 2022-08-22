@@ -1,4 +1,4 @@
-import { apiQuery } from "./apiQuery.js"
+import { weatherQuery } from "./weatherQuery.js"
 import { parseResponse } from "./parseResponse.js";
 
 /**
@@ -9,7 +9,7 @@ import { parseResponse } from "./parseResponse.js";
  * @returns {Object}
  */
 export const getWeather = async (city) => {
-    const response = await apiQuery(city)
+    const response = await weatherQuery(city)
 
     if (response) {
         const weatherCollection = response.list
