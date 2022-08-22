@@ -3,7 +3,9 @@
 
 // import { encodeInput } from "./utils/encodeInput.js";
 
-import { getAutocomplete } from "./models/getAutocomplete.js";
+// import { getAutocomplete } from "./models/getAutocomplete.js";
+
+import { cityInputListener } from "./controllers/cityInputListener.js";
 
 import { searchButtonListener } from "./controllers/searchButtonListener.js"
 
@@ -15,7 +17,9 @@ import { searchButtonListener } from "./controllers/searchButtonListener.js"
 
 searchButtonListener()
 
-console.log(getAutocomplete("bru"));
+cityInputListener()
+
+//console.log(getAutocomplete("bru"));
 // console.log(encodeInput("<div>hello</div>"));
 
 // const test = 'https://api.teleport.org/api/cities/?search=Bruxelles'
