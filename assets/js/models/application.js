@@ -88,6 +88,7 @@ export const APPLICATION = {
     },
     units: 'metric',
     errorTimeout: 500,
+    inputTimeout: 1500,
     //request: 'https://thatsthespir.it/api',
     //defaultImage: '../assets/img/avatar.jpg'
 }

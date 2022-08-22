@@ -1,5 +1,15 @@
-export const autoCompleteController = (string) => {
+import { getInput } from "../utils/getInput.js"
+import { getAutocomplete } from "../models/getAutocomplete.js";
 
-    console.log(string);
+/**
+ * 
+ */
+export const autoCompleteController = () => {
+    const searchInputValue = getInput()
+    console.log(searchInputValue);
+
+    const autocompleteArray = getAutocomplete(searchInputValue)
+
+    console.log(autocompleteArray);
 
 }
