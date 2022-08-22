@@ -11,6 +11,11 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
+        &.error {
+            animation-name: rotate;
+            animation-duration: $animation_time_medium;
+        }
     }
 
     &__search {

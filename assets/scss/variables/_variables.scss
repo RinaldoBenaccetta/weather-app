@@ -15,6 +15,8 @@ $margin_large: $margin_default * 1.5;
 $border_radius: $default_font_size * 0.5;
 $border_size_default: 1px;
 
-$animation_time_default: 0.1s;
+$animation_time_small: 0.1s;
+$animation_time_medium: 0.2s;
+$animation_time_default: $animation_time_small;
 
 $search_container_size: 90%;

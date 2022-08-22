@@ -332,6 +332,26 @@ body {
   height: 85%;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  80% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .main__cards-container {
   display: flex;
   list-style: none;
@@ -393,6 +413,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.header__search-container.error {
+  animation-name: rotate;
+  animation-duration: 0.2s;
 }
 .header__search {
   height: 1.875rem;
