@@ -14,8 +14,9 @@
     }
 
     &__search {
-        display: flex;
         height: $default_font_size * 1.5;
+
+        display: flex;
         justify-content: center;
     }
 
@@ -39,6 +40,7 @@
     &__town-input {
         box-sizing: border-box;
 
+        width: 76%;
         height: 100%;
 
         margin: 0;

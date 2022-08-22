@@ -395,8 +395,8 @@ body {
   justify-content: flex-end;
 }
 .header__search {
-  display: flex;
   height: 1.875rem;
+  display: flex;
   justify-content: center;
 }
 .header__search-label {
@@ -411,6 +411,7 @@ body {
 }
 .header__town-input {
   box-sizing: border-box;
+  width: 76%;
   height: 100%;
   margin: 0;
   padding: 0.5rem;
