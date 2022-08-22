@@ -1,7 +1,7 @@
 @import 'vendor/normalize', 'variables/variables', 'variables/colors',
     'variables/variables', 'mixins/mixins', 'fonts/fonts', 'layout/layout',
-    'components/today-card', 'components/search-bar', 'components/icons',
-    'components/weather-in';
+    'components/today-card', 'components/search-bar', 'components/autocomplete',
+    'components/icons', 'components/weather-in';
 
 @if $dev == true {
     body {

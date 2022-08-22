@@ -1,0 +1,34 @@
+.header {
+    &__search {
+        position: relative;
+    }
+
+    &__autocomplete {
+        box-sizing: border-box;
+
+        position: absolute;
+
+        // width: $search_container_size;
+        width: 100%;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        // top: $margin_small;
+        //left: -$margin_large;
+
+        background-color: $color-white;
+
+        z-index: 10;
+
+        outline-color: yellow;
+
+        &__list {
+            list-style-type: none;
+
+            padding: $margin_small;
+            // padding-left: 0;
+        }
+    }
+}

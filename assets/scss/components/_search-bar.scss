@@ -5,7 +5,7 @@
     &__search-container {
         align-self: center;
 
-        width: 90%;
+        width: $search_container_size;
         height: $default_font_size * 3;
 
         display: flex;
@@ -72,6 +72,8 @@
     }
 
     &__button {
+        width: 24%;
+
         margin: 0;
         padding: 0 $margin_small;
 
