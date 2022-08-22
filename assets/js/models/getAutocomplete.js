@@ -1,7 +1,7 @@
 import { autocompleteQuery } from "./autocompleteQuery.js"
 import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js";
 import { trimStart } from "../utils/trimStart.js";
-import { encodeInput } from "../utils/encodeInput.js";
+// import { encodeInput } from "../utils/encodeInput.js";
 
 /**
  * Query API fro a collection of cities matching the provide string,
@@ -21,19 +21,25 @@ export const getAutocomplete = (string) => {
     return string ? processAutocomplete(string) : false
 }
 
+/**
+ * Query the API that provide cities names according
+ * to the string passed and parse the result
+ * to return an array with only cities names.
+ * 
+ * @param {String} string 
+ * @returns {Array}
+ */
 const processAutocomplete = async (string) => {
-    // replacing spaces by %20 make bug API
+    // todo : replacing spaces by %20 make bug API when encode, fix that
     // string = encodeInput(string)
 
     const response = await autocompleteQuery(string)
 
     if (response) {
         const autocompleteCollection = response._embedded["city:search-results"]
-
         const parsedCollection = parseAutocompleteResponse(autocompleteCollection)
 
         return parsedCollection
-
     } else {
         return false
     }

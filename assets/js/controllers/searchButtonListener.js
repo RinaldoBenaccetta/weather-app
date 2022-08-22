@@ -1,16 +1,24 @@
 import { APPLICATION } from "../models/application.js"
 import { weatherController } from "./weatherController.js"
-// import { encodeInput } from "../utils/encodeInput.js"
+import { getInput } from "../utils/getInput.js"
+import { flushAutocomplete } from "../views/flushAutocomplete.js"
 
+/**
+ * Listen The 'find' button and handle the query.
+ */
 export const searchButtonListener = () => {
     const searchButtonElement = document.querySelector(APPLICATION.id.header.searchContainer.search)
 
-    searchButtonElement.addEventListener('click', buttonHandler)
+    searchButtonElement.addEventListener('click', cityFindHandler)
 }
 
-export const buttonHandler = () => {
-    const searchInputElement = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
-    const searchInputValue = searchInputElement.value
+/**
+ * get the value of the city input
+ *  and call the controller that show the weather for it.
+ */
+export const cityFindHandler = () => {
+    const searchInputValue = getInput()
 
+    flushAutocomplete()
     weatherController(searchInputValue)
 }

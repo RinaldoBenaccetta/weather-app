@@ -1,9 +1,10 @@
 import { APPLICATION } from "../models/application.js"
 
-export const flushMainContainer = () => {
+/**
+ * Remove the content of the cards container.
+ */
+export const flushCardsContainer = () => {
     const container = document.querySelector(APPLICATION.id.main.cards.container)
-
-    // console.log(APPLICATION.id.main.cards.container);
 
     container.innerHTML = ''
 }

@@ -1,4 +1,9 @@
-
+/**
+ * Return the name of the icon file according to the provided API code.
+ * 
+ * @param {String} icon 
+ * @returns {String}
+ */
 export const formatIcon = (icon) => {
     // console.log(icon);
     const iconNumber = icon.slice(0, 2)

@@ -1,12 +1,12 @@
 import { APPLICATION } from "../models/application.js";
 import { getWeather } from "../models/getWeather.js"
 import { todayWeather } from "../views/todayWeather.js"
-import { flushMainContainer } from "../views/flushMainContainer.js"
+import { flushCardsContainer } from "../views/flushCardsContainer.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js";
 
 /**
- * Get weather for next 24hours according to provided coordinates
+ * Get weather for next 24hours according to provided city
  * and show them in the DOM.
  * 
  * @param {String} city
@@ -15,29 +15,24 @@ export const weatherController = async (city) => {
     const weatherCollection = await getWeather(city)
 
     weatherCollection ? WeatherReturn(weatherCollection, city) : WeatherReturnError()
-
-    // if (weatherCollection) {
-    //     // flushMainContainer()
-    //     // // call the today weather view
-    //     // todayWeather(weatherCollection.today)
-    //     WeatherReturn(weatherCollection)
-    // } else {
-    //     // const errorClass = APPLICATION.class.error
-    //     // const inputElement = APPLICATION.id.header.townInput
-    //     // const timer = APPLICATION.errorTimeout
-
-    //     // classTimeout(errorClass, inputElement, timer)
-    //     WeatherReturnError()
-    // }
 }
 
+/**
+ * Show the weather and selected city in DOM.
+ * @param {Array} weatherCollection 
+ * @param {String} city 
+ */
 const WeatherReturn = (weatherCollection, city) => {
-    flushMainContainer()
-    // call the today weather view
+    flushCardsContainer()
+    // call the weather in view
     weatherIn(city)
+    // call the today weather view
     todayWeather(weatherCollection.today)
 }
 
+/**
+ * Add an error class to the search input when API send an error.
+ */
 const WeatherReturnError = () => {
     const errorClass = APPLICATION.class.error
     const inputElement = APPLICATION.id.header.townInput
