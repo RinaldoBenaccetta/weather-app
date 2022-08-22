@@ -8,7 +8,6 @@ import { autocompleteItem } from "../views/autocompleteItem.js"
  * @param {Array} autocompleteCollection - Collection containing all cities items.
  */
 export const autocomplete = (autocompleteCollection) => {
-    console.log(autocompleteCollection);
     autocompleteCollection.forEach((city) => {
         autocompleteItem(city)
     });

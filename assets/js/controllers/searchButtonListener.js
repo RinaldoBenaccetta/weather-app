@@ -5,10 +5,10 @@ import { weatherController } from "./weatherController.js"
 export const searchButtonListener = () => {
     const searchButtonElement = document.querySelector(APPLICATION.id.header.searchContainer.search)
 
-    searchButtonElement.addEventListener('click', buttonListener)
+    searchButtonElement.addEventListener('click', buttonHandler)
 }
 
-const buttonListener = () => {
+export const buttonHandler = () => {
     const searchInputElement = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
     const searchInputValue = searchInputElement.value
 

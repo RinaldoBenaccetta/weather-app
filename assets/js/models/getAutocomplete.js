@@ -22,7 +22,8 @@ export const getAutocomplete = (string) => {
 }
 
 const processAutocomplete = async (string) => {
-    string = encodeInput(string)
+    // replacing spaces by %20 make bug API
+    // string = encodeInput(string)
 
     const response = await autocompleteQuery(string)
 
