@@ -3,6 +3,7 @@ import { getWeather } from "../models/getWeather.js"
 import { todayWeather } from "../views/todayWeather.js"
 import { flushMainContainer } from "../views/flushMainContainer.js"
 import { classTimeout } from "../utils/classTimeout.js"
+import { weatherIn } from "../views/weatherIn.js";
 
 /**
  * Get weather for next 24hours according to provided coordinates
@@ -13,7 +14,7 @@ import { classTimeout } from "../utils/classTimeout.js"
 export const weatherController = async (city) => {
     const weatherCollection = await getWeather(city)
 
-    weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
+    weatherCollection ? WeatherReturn(weatherCollection, city) : WeatherReturnError()
 
     // if (weatherCollection) {
     //     // flushMainContainer()
@@ -30,9 +31,10 @@ export const weatherController = async (city) => {
     // }
 }
 
-const WeatherReturn = (weatherCollection) => {
+const WeatherReturn = (weatherCollection, city) => {
     flushMainContainer()
     // call the today weather view
+    weatherIn(city)
     todayWeather(weatherCollection.today)
 }
 
