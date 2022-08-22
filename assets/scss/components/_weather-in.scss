@@ -1,0 +1,16 @@
+.main {
+    &__localisation {
+        &__container {
+            text-align: center;
+            font-size: $font_size_large;
+        }
+
+        &__start {
+            color: $color_primary_dark;
+        }
+
+        &__city {
+            color: $color_primary_darker;
+        }
+    }
+}

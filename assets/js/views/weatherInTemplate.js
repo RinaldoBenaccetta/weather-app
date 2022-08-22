@@ -10,5 +10,5 @@ export const weatherInTemplate = (city) => {
     //const CLASS = APPLICATION.class.main.card
     // const ID = APPLICATION.id.main.localisation
 
-    return `<div class="main__lacalisation__container"> <div class="main__localisation__start">Weather in </div><div class="main__localisation__town">${city}</div></div>`
+    return `<div class="main__localisation__container"> <div class="main__localisation__start">Weather in </div><div class="main__localisation__city">${city}</div></div>`
 }
