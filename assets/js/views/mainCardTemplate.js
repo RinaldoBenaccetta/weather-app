@@ -16,7 +16,7 @@ export const mainCardTemplate = (data, id) => {
                 <div class="${CLASS.icon} ${data.icon}" id="${ID.icon}-${id}"></div>
                 <div class="${CLASS.state}" id="${ID.state}-${id}">${data.state}</div>
                 <div class="${CLASS.temp}" id="${ID.temp}-${id}">${data.temp}</div>
-                <div class="${CLASS.feelLabel}">feel : </div>
+                <div class="${CLASS.feelLabel}">feel</div>
                 <div class="${CLASS.feel}" id="${ID.feel}-${id}">${data.feel}</div>
             </div>`
 }
