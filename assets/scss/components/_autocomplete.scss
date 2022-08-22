@@ -10,9 +10,13 @@
 
         width: 100%;
 
+        max-height: 80vh;
+
         top: calc(100% - $border_radius);
         left: 0;
         right: 0;
+
+        overflow: scroll;
 
         border: $border_size_default solid $color_primary_darker;
         border-top: none;
@@ -28,7 +32,15 @@
         &__list {
             list-style-type: none;
 
+            padding: $margin_small $margin_default 0 $margin_default;
+        }
+
+        &__item {
+            //margin-bottom: $margin_small;
+
             padding: $margin_small;
+
+            border-bottom: $border_size_default solid $color_primary_medium;
         }
     }
 }
