@@ -1,4 +1,4 @@
-import { request } from "./request.js"
+import { cityWeatherRequest } from "./request.js"
 
 /**
  * Get the weather from API according to the coordinates in jon format.
@@ -10,7 +10,7 @@ import { request } from "./request.js"
  */
 export const apiQuery = async (city) => {
     try {
-        const response = await fetch(request(city))
+        const response = await fetch(cityWeatherRequest(city))
         const jsonResponse = await response.json()
 
         return jsonResponse.cod === '200' ? jsonResponse : false
