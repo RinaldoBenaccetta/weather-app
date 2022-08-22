@@ -11,10 +11,8 @@ import { templateElement } from "./templateElement.js"
  */
 export const weatherIn = (city) => {
     const element = templateElement(weatherInTemplate(city))
-    const container = APPLICATION.id.main.container
+    const container = APPLICATION.id.main.localisation
     const parent = document.querySelector(container)
-    const cardsContainer = APPLICATION.id.main.cards.container
-    const cards = document.querySelector(cardsContainer)
 
-    parent.insertBefore(element, cards)
+    parent.appendChild(element)
 }

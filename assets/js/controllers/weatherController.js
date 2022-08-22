@@ -1,9 +1,10 @@
-import { APPLICATION } from "../models/application.js";
+import { APPLICATION } from "../models/application.js"
 import { getWeather } from "../models/getWeather.js"
 import { todayWeather } from "../views/todayWeather.js"
 import { flushCardsContainer } from "../views/flushCardsContainer.js"
+import { flushWeatherIn } from "../views/flushWeatherIn.js"
 import { classTimeout } from "../utils/classTimeout.js"
-import { weatherIn } from "../views/weatherIn.js";
+import { weatherIn } from "../views/weatherIn.js"
 
 /**
  * Get weather for next 24hours according to provided city
@@ -23,6 +24,7 @@ export const weatherController = async (city) => {
  * @param {String} city 
  */
 const WeatherReturn = (weatherCollection, city) => {
+    flushWeatherIn()
     flushCardsContainer()
     // call the weather in view
     weatherIn(city)
