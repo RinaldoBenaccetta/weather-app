@@ -12,7 +12,6 @@ import { templateElement } from "./templateElement.js"
 export const mainCard = (data, id) => {
     const element = templateElement(mainCardTemplate(data, id))
     const container = APPLICATION.id.main.cards.container
-    //const container = APPLICATION.element.mainContainer
     const parent = document.querySelector(container)
 
     parent.appendChild(element)

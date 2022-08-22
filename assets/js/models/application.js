@@ -16,6 +16,10 @@ export const APPLICATION = {
                 container: '#search-container',
                 townInput: '#town-input',
                 search: '#town-search-button',
+                autocomplete: {
+                    container: '#autocomplete',
+                    list: '#autocomplete-list'
+                },
             }
 
         },
@@ -55,6 +59,13 @@ export const APPLICATION = {
                 container: 'header__search-container',
                 townInput: 'header__town-input',
                 search: 'header__button',
+                autocomplete: {
+                    container: 'header__autocomplete',
+                    list: {
+                        container: 'header__autocomplete__list',
+                        item: 'header__autocomplete__item'
+                    }
+                },
             }
         },
         main: {
@@ -89,6 +100,4 @@ export const APPLICATION = {
     units: 'metric',
     errorTimeout: 500,
     inputTimeout: 1500,
-    //request: 'https://thatsthespir.it/api',
-    //defaultImage: '../assets/img/avatar.jpg'
 }

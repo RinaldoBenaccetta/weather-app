@@ -10,8 +10,6 @@ import { formatId } from "../utils/formatId.js"
  *                one object by 3 hours.
  */
 export const todayWeather = (weatherCollection) => {
-    // flushMainContainer()
-
     weatherCollection.forEach((time, index) => {
         mainCard(time, formatId(index, 2))
     });
