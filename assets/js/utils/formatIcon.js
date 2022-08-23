@@ -1,35 +1,19 @@
+import { APPLICATION } from "../models/application.js";
+
 /**
- * Return the name of the icon file according to the provided API code.
+ * Return the name of the icon file in the provided icon list
+ * according to the provided API code.
  * 
- * @param {String} icon 
+ * @param {String} iconId
  * @returns {String}
  */
-export const formatIcon = (icon) => {
-    // console.log(icon);
-    const iconNumber = icon.slice(0, 2)
+export const formatIcon = (iconId, iconList) => {
+    const emptyIcon = APPLICATION.class.icons.empty
+    const useableIconId = getuseableIconId(iconId)
 
-    switch (iconNumber) {
-        case '01':
-            return 'clear-sky'
-        case '02':
-            return 'few-clouds'
-        case '03':
-            return 'scattered-clouds'
-        case '04':
-            return 'broken-clouds'
-        case '09':
-            return 'shower-rain'
-        case '10':
-            return 'rain'
-        case '11':
-            return 'thunderstorm'
-        case '13':
-            return 'snow'
-        case '50':
-            return 'mist'
-
-        default:
-            return 'na'
-    }
+    return iconList.reduce((matchIcon, icon) => {
+        return icon[0] === useableIconId ? icon[1] : matchIcon
+    }, emptyIcon)
 }
 
+const getuseableIconId = (iconId) => iconId.slice(0, 2)
