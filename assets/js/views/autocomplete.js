@@ -1,13 +1,13 @@
 import { autocompleteItem } from "../views/autocompleteItem.js"
-import { toggleAutocomplete } from "../utils/toggleAutocomplete.js"
+import { addAutocomplete } from "../utils/addAutocomplete.js"
 
 /**
- * Show 8 cards in DOM, each card represent 3 hours of prediction.
+ * Show autocomplete list in dom.
  * 
  * @param {Array} autocompleteCollection - Collection containing all cities items.
  */
 export const autocomplete = (autocompleteCollection) => {
-    toggleAutocomplete()
+    addAutocomplete()
     autocompleteCollection.forEach((city) => {
         autocompleteItem(city)
     });
