@@ -1,5 +1,5 @@
-import { cityInputListener } from "./controllers/cityInputListener.js";
-import { searchButtonListener } from "./controllers/searchButtonListener.js"
+import { cityInputListener } from "./controllers/listeners/cityInputListener.js";
+import { searchButtonListener } from "./controllers/listeners/searchButtonListener.js"
 
 /**
  * Add listener to search button and city input.

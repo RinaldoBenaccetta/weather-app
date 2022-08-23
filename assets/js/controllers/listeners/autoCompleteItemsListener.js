@@ -1,8 +1,6 @@
-import { APPLICATION } from "../models/application.js"
-// import { flushAutocomplete } from "../views/flushAutocomplete.js"
+import { APPLICATION } from "../../models/application.js"
 import { cityFindHandler } from "./searchButtonListener.js"
-import { toggleAutocomplete } from "../utils/toggleAutocomplete.js"
-// import { removeAutocomplete } from "../utils/removeAutocomplete.js"
+import { toggleAutocomplete } from "../../utils/toggleAutocomplete.js"
 
 /**
  * Add a listener to the provided element

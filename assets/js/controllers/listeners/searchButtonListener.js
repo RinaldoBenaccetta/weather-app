@@ -1,7 +1,7 @@
-import { APPLICATION } from "../models/application.js"
-import { weatherController } from "./weatherController.js"
-import { getInput } from "../utils/getInput.js"
-import { flushAutocomplete } from "../views/flushAutocomplete.js"
+import { APPLICATION } from "../../models/application.js"
+import { weatherController } from "../weatherController.js"
+import { getInput } from "../../utils/getInput.js"
+import { flushAutocomplete } from "../../views/flushAutocomplete.js"
 
 /**
  * Listen The 'find' button and handle the query.

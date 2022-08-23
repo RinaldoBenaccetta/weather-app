@@ -1,5 +1,5 @@
-import { APPLICATION } from "../models/application.js"
-import { autoCompleteController } from "./autocompleteController.js";
+import { APPLICATION } from "../../models/application.js"
+import { autoCompleteController } from "../autocompleteController.js";
 
 /**
  * Add a listener on search input on keyup
