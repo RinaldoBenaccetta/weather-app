@@ -21,7 +21,6 @@ export const APPLICATION = {
                     list: '#autocomplete-list'
                 },
             }
-
         },
         main: {
             container: '#main',
@@ -37,7 +36,6 @@ export const APPLICATION = {
                     feel: '#main-card-feel-',
                 }
             }
-
         },
         footer: {
             container: '#footer',
@@ -80,7 +78,6 @@ export const APPLICATION = {
                 feel: 'main__card__feel-temperature',
                 feelLabel: 'main__card__feel-label',
             }
-
         },
         footer: {
             container: 'footer',
@@ -94,6 +91,20 @@ export const APPLICATION = {
             }
         },
         hidden: 'hidden',
+        icons: {
+            empty: 'na',
+            weather: [
+                ['01', 'clear-sky'],
+                ['02', 'few-clouds'],
+                ['03', 'scattered-clouds'],
+                ['04', 'broken-clouds'],
+                ['09', 'shower-rain'],
+                ['10', 'rain'],
+                ['11', 'thunderstorm'],
+                ['13', 'snow'],
+                ['50', 'mist'],
+            ]
+        }
     },
     externalApi: {
         key: 'f9c943a7adbe8a3ad653fe2f3d5d2794'
