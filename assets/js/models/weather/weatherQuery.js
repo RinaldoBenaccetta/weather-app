@@ -1,4 +1,4 @@
-import { cityWeatherRequest } from "./request.js"
+import { cityWeatherRequest } from "../request.js"
 
 /**
  * Get the weather from API in jon format according to the city provided.

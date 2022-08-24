@@ -1,7 +1,7 @@
-import { formatHour } from "../utils/formatHour.js"
-import { formatTemp } from "../utils/formatTemp.js"
-import { formatIcon } from "../utils/formatIcon.js"
-import { APPLICATION } from "../models/application.js";
+import { formatHour } from "../../utils/formatHour.js"
+import { formatTemp } from "../../utils/formatTemp.js"
+import { formatIcon } from "../../utils/formatIcon.js"
+import { APPLICATION } from "../../models/application.js";
 
 /**
  * Returns a collection of object ready to be used by views.

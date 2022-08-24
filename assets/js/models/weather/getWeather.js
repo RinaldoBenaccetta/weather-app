@@ -1,6 +1,6 @@
 import { weatherQuery } from "./weatherQuery.js"
 import { parseWeatherResponse } from "./parseWeatherResponse.js"
-import { APPLICATION } from "../models/application.js";
+import { APPLICATION } from "../application.js";
 
 /**
  * Query the distant API for Weather and return it parsed

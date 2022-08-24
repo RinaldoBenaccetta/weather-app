@@ -1,5 +1,5 @@
 import { APPLICATION } from "../models/application.js"
-import { getWeather } from "../models/getWeather.js"
+import { getWeather } from "../models/weather/getWeather.js"
 import { showTodayWeather } from "../views/todayCards/showTodayWeather.js"
 import { removeWeatherTitle } from "../views/weatherTitle/removeWeatherTitle.js"
 import { classTimeout } from "../utils/classTimeout.js"
