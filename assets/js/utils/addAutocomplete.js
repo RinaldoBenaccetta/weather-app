@@ -3,10 +3,10 @@ import { APPLICATION } from "../models/application.js";
 /**
  * Show autocomplete container by removing the hidden class of it.
  */
-export const addAutocomplete = () => {
-    const container = APPLICATION.id.header.searchContainer.autocomplete.container
-    const element = document.querySelector(container)
+export const showAutocomplete = () => {
+    const autocompleteContainerId = APPLICATION.id.header.searchContainer.autocomplete.container
+    const autocompleteElementId = document.querySelector(autocompleteContainerId)
     const hiddenClass = APPLICATION.class.hidden
 
-    element.classList.remove(hiddenClass)
+    autocompleteElementId.classList.remove(hiddenClass)
 }
