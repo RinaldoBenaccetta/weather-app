@@ -2,13 +2,6 @@
  * An object containg application datas.
  */
 export const APPLICATION = {
-    element: {
-        headerContainer() { document.querySelector(this.id.header.container) },
-        mainContainer: document.querySelector('#main'),
-        footerContainer() { document.querySelector(this.id.footer.container) },
-        townInput() { document.querySelector(this.id.header.townInput) },
-        search() { document.querySelector(this.id.header.search) },
-    },
     id: {
         header: {
             container: '#header',
