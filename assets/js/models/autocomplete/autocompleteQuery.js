@@ -15,7 +15,6 @@ export const autocompleteQuery = async (string) => {
         return jsonResponse
 
     } catch (error) {
-        console.log(error);
         return false
     }
 }

@@ -1,11 +1,10 @@
-import { APPLICATION } from "../../models/application.js"
+import { ELEMENTS } from "../../models/elements.js"
 
 /**
  * Remove the content of the cards container.
  */
 export const removeWeatherTitle = () => {
-    const weatherTitleId = APPLICATION.id.main.localisation
-    const weatherTitleContainer = document.querySelector(weatherTitleId)
+    const weatherTitleContainer = ELEMENTS.weatherTitleContainer
 
     if (weatherTitleContainer) {
         weatherTitleContainer.innerHTML = ''

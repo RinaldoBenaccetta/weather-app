@@ -1,6 +1,6 @@
-import { APPLICATION } from "../../models/application.js"
 import { todayWeatherTemplate } from "./todayWeatherTemplate.js"
 import { templateElement } from "../templateElement.js"
+import { ELEMENTS } from "../../models/elements.js";
 
 /**
  * Add a card in main DOM element.
@@ -11,8 +11,6 @@ import { templateElement } from "../templateElement.js"
  */
 export const appendTodayWeatherCard = (data, id) => {
     const element = templateElement(todayWeatherTemplate(data, id))
-    const container = APPLICATION.id.main.cards.container
-    const parent = document.querySelector(container)
 
-    parent.appendChild(element)
+    ELEMENTS.todayCardsContainer.appendChild(element)
 }

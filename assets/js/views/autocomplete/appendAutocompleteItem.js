@@ -1,7 +1,7 @@
-import { APPLICATION } from "../../models/application.js"
 import { autocompleteItemTemplate } from "./autocompleteItemTemplate.js"
 import { templateElement } from "../templateElement.js"
 import { autoCompleteItemsListener } from "../../controllers/listeners/autoCompleteItemsListener.js"
+import { ELEMENTS } from "../../models/elements.js";
 
 /**
  * Add a city item in autocomplete DOM element.
@@ -12,10 +12,8 @@ import { autoCompleteItemsListener } from "../../controllers/listeners/autoCompl
  */
 export const appendAutocompleteItem = (city) => {
     const element = templateElement(autocompleteItemTemplate(city))
-    const container = APPLICATION.id.header.searchContainer.autocomplete.list
-    const parent = document.querySelector(container)
 
-    parent.appendChild(element)
+    ELEMENTS.autocompleteList.appendChild(element)
 
     autoCompleteItemsListener(element)
 }

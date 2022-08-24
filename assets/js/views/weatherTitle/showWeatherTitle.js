@@ -1,4 +1,4 @@
-import { APPLICATION } from "../../models/application.js"
+import { ELEMENTS } from "../../models/elements.js"
 import { weatherTitleTemplate } from "./weatherTitleTemplate.js"
 import { templateElement } from "../templateElement.js"
 
@@ -11,8 +11,6 @@ import { templateElement } from "../templateElement.js"
  */
 export const showWeatherTitle = (city) => {
     const titleElement = templateElement(weatherTitleTemplate(city))
-    const parentContainerId = APPLICATION.id.main.localisation
-    const parentElement = document.querySelector(parentContainerId)
 
-    parentElement.appendChild(titleElement)
+    ELEMENTS.weatherTitleContainer.appendChild(titleElement)
 }

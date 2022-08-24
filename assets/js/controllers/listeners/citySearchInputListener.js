@@ -1,14 +1,11 @@
+import { ELEMENTS } from "../../models/elements.js"
 import { APPLICATION } from "../../models/application.js"
 import { autoCompleteController } from "../autocompleteController.js"
 
 /**
  * Add a listener on search input on keyup
  */
-export const citySearchInputListener = () => {
-    const cityInput = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
-
-    cityInput.addEventListener('keyup', inputListener)
-}
+export const citySearchInputListener = () => ELEMENTS.citySearchInput.addEventListener('keyup', inputListener)
 
 /**
  * Remove listener on the search input,
@@ -17,9 +14,7 @@ export const citySearchInputListener = () => {
  * and add a new listener to the input.
  */
 const inputListener = () => {
-    const cityInput = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
-
-    cityInput.removeEventListener('keyup', inputListener)
+    ELEMENTS.citySearchInput.removeEventListener('keyup', inputListener)
 
     delayedCallAutocomplete()
     delayedStartListener()
