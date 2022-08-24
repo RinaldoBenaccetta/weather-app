@@ -1,6 +1,6 @@
 import { APPLICATION } from "../../models/application.js"
 import { weatherController } from "../weatherController.js"
-import { getInput } from "../../utils/getInput.js"
+import { getCitySearchValue } from "../../utils/getCitySearchValue.js"
 
 /**
  * Listen The 'find' button and handle the query.
@@ -12,11 +12,7 @@ export const searchButtonListener = () => {
 }
 
 /**
- * get the value of the city input
- *  and call the controller that show the weather for it.
+ * Call the controller that show the weather
+ * according to the search input value.
  */
-export const cityFindHandler = () => {
-    const searchInputValue = getInput()
-
-    weatherController(searchInputValue)
-}
+export const cityFindHandler = () => weatherController(getCitySearchValue())
