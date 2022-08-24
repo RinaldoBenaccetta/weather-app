@@ -5,7 +5,6 @@ import { flushCardsContainer } from "../views/flushCardsContainer.js"
 import { flushWeatherIn } from "../views/flushWeatherIn.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js"
-import { toggleAutocomplete } from "../utils/toggleAutocomplete.js"
 import { removeAutocomplete } from "../utils/removeAutocomplete.js"
 
 /**

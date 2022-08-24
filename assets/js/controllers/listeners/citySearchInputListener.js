@@ -4,7 +4,7 @@ import { autoCompleteController } from "../autocompleteController.js";
 /**
  * Add a listener on search input on keyup
  */
-export const cityInputListener = () => {
+export const citySearchInputListener = () => {
     const cityInput = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
 
     cityInput.addEventListener('keyup', inputListener)
@@ -18,12 +18,25 @@ export const cityInputListener = () => {
  */
 const inputListener = () => {
     const cityInput = document.querySelector(APPLICATION.id.header.searchContainer.townInput)
-    const inputTimeout = APPLICATION.inputTimeout
 
     cityInput.removeEventListener('keyup', inputListener)
 
-    setTimeout(() => {
-        autoCompleteController()
-        cityInputListener()
-    }, inputTimeout);
+    delayedCallAutocomplete()
+    delayedStartListener()
+}
+
+/**
+ * Call autocomplete controller after a delay.
+ */
+const delayedCallAutocomplete = () => {
+    setTimeout(() => autoCompleteController()
+        , APPLICATION.inputTimeout)
+}
+
+/**
+ * Start the city search listener after a delay.
+ */
+const delayedStartListener = () => {
+    setTimeout(() => citySearchInputListener()
+        , APPLICATION.inputTimeout)
 }

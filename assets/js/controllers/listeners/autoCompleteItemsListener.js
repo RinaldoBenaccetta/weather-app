@@ -4,7 +4,7 @@ import { removeAutocomplete } from "../../utils/removeAutocomplete.js"
 
 /**
  * Add a listener to the provided element
- * that call the autocomplete handler xhen clicked.
+ * that call the autocomplete handler when clicked.
  * 
  * @param {Node} item 
  */
