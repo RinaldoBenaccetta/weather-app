@@ -14,7 +14,6 @@ export const getWeather = async (city) => {
     if (response) {
         const weatherCollection = response.list
         const cityObject = response.city
-        // console.log(response);
         const parsedCollection = parseWeatherResponse(weatherCollection, cityObject)
         const todayCollection = todayWeather(parsedCollection)
 
