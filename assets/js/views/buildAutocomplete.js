@@ -6,10 +6,10 @@ import { addAutocomplete } from "../utils/addAutocomplete.js"
  * 
  * @param {Array} autocompleteCollection - Collection containing all cities items.
  */
-export const showAutocomplete = (autocompleteCollection) => {
-    addAutocomplete()
-
+export const buildAutocomplete = (autocompleteCollection) => {
     autocompleteCollection.forEach((city) => {
         autocompleteItem(city)
-    });
+    })
+
+    addAutocomplete()
 }

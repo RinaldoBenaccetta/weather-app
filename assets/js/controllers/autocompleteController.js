@@ -1,6 +1,6 @@
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 import { getAutocompleteList } from "../models/getAutocompleteList.js"
-import { showAutocomplete } from "../views/showAutocomplete.js"
+import { buildAutocomplete } from "../views/buildAutocomplete.js"
 import { flushAutocomplete } from "../views/flushAutocomplete.js"
 
 /**
@@ -12,5 +12,5 @@ export const autoCompleteController = async () => {
 
     flushAutocomplete()
 
-    if (autocompleteList) showAutocomplete(autocompleteList)
+    if (autocompleteList) buildAutocomplete(autocompleteList)
 }
