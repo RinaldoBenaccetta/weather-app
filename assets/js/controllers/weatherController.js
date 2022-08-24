@@ -7,6 +7,7 @@ import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
+import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 
 /**
  * Get weather for next 24hours according to provided city
@@ -14,7 +15,8 @@ import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompl
  * 
  * @param {String} city
  */
-export const weatherController = async (city) => {
+export const weatherController = async () => {
+    const city = getCitySearchValue()
     const weatherCollection = await getWeather(city)
 
     weatherCollection ? WeatherReturn(weatherCollection, city) : WeatherReturnError()

@@ -1,6 +1,6 @@
 import { APPLICATION } from "../../models/application.js"
-import { cityFindHandler } from "./searchButtonListener.js"
 import { hideAutocomplete } from "../../views/autocomplete/hideAutocomplete.js"
+import { weatherController } from "../weatherController.js";
 
 /**
  * Add a listener to the provided element
@@ -24,7 +24,7 @@ const autoCompleteItemsHandler = (element) => {
 
     hideAutocomplete()
     replaceSearchByAutocomplete(newValue)
-    cityFindHandler()
+    weatherController()
 }
 
 /**
