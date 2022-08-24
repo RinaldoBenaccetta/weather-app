@@ -1,4 +1,4 @@
-import { autocompleteItem } from "../views/autocompleteItem.js"
+import { autocompleteItem } from "./autocompleteItem.js"
 import { addAutocomplete } from "../utils/addAutocomplete.js"
 
 /**
@@ -6,8 +6,9 @@ import { addAutocomplete } from "../utils/addAutocomplete.js"
  * 
  * @param {Array} autocompleteCollection - Collection containing all cities items.
  */
-export const autocomplete = (autocompleteCollection) => {
+export const showAutocomplete = (autocompleteCollection) => {
     addAutocomplete()
+
     autocompleteCollection.forEach((city) => {
         autocompleteItem(city)
     });
