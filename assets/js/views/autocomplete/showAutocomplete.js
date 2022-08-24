@@ -5,8 +5,8 @@ import { APPLICATION } from "../../models/application.js";
  */
 export const showAutocomplete = () => {
     const autocompleteContainerId = APPLICATION.id.header.searchContainer.autocomplete.container
-    const autocompleteElementId = document.querySelector(autocompleteContainerId)
+    const autocompleteContainerElement = document.querySelector(autocompleteContainerId)
     const hiddenClass = APPLICATION.class.hidden
 
-    autocompleteElementId.classList.remove(hiddenClass)
+    autocompleteContainerElement.classList.remove(hiddenClass)
 }
