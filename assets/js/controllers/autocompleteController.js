@@ -1,5 +1,5 @@
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
-import { getAutocomplete } from "../models/getAutocomplete.js"
+import { getAutocompleteList } from "../models/getAutocompleteList.js"
 import { autocomplete } from "../views/autocomplete.js"
 import { flushAutocomplete } from "../views/flushAutocomplete.js"
 
@@ -8,11 +8,11 @@ import { flushAutocomplete } from "../views/flushAutocomplete.js"
  * search if something is found.
  */
 export const autoCompleteController = async () => {
-    const autocompleteArray = await getAutocomplete(getCitySearchValue())
+    const autocompleteList = await getAutocompleteList(getCitySearchValue())
 
     flushAutocomplete()
 
-    if (autocompleteArray.length > 0) {
-        autocomplete(autocompleteArray)
+    if (autocompleteList.length > 0) {
+        autocomplete(autocompleteList)
     }
 }

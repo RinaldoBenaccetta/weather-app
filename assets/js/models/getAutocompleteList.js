@@ -1,24 +1,25 @@
 import { autocompleteQuery } from "./autocompleteQuery.js"
-import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js";
-import { trimStart } from "../utils/trimStart.js";
-// import { encodeInput } from "../utils/encodeInput.js";
+import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js"
+import { trimStart } from "../utils/trimStart.js"
 
 /**
- * Query API fro a collection of cities matching the provide string,
+ * Query API for a collection of cities matching the provided string,
  * parse the result to return only full names of matching cities.
  * 
- * Remove spaces at start of the provided string to prevent
- *  to get a giant list of town if we do an API request
+ * Before the query, this function remove spaces at start
+ * of the provided string to prevent
+ * to get a giant list of town if we do an API request
  * with only space.
  * 
+ * If autocomplete list is empty : return False
+ * 
  * @param {String} string 
- * @returns {Array}
+ * @returns {Array|False}
  */
-export const getAutocomplete = (string) => {
-    // remove spaces at start of the string
+export const getAutocompleteList = (string) => {
     string = trimStart(string)
 
-    return string ? processAutocomplete(string) : false
+    return string ? processAutocompleteQuery(string) : false
 }
 
 /**
@@ -29,10 +30,7 @@ export const getAutocomplete = (string) => {
  * @param {String} string 
  * @returns {Array}
  */
-const processAutocomplete = async (string) => {
-    // todo : replacing spaces by %20 make bug API when encode, fix that
-    // string = encodeInput(string)
-
+const processAutocompleteQuery = async (string) => {
     const response = await autocompleteQuery(string)
 
     if (response) {
