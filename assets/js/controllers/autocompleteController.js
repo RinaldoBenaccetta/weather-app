@@ -1,7 +1,7 @@
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 import { getAutocompleteList } from "../models/getAutocompleteList.js"
 import { buildAutocomplete } from "../views/autocomplete/buildAutocomplete.js"
-import { flushAutocomplete } from "../views/flushAutocomplete.js"
+import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 
 /**
  * Flush the autocomplete in DOM and replace it by new autocomplete
@@ -10,7 +10,7 @@ import { flushAutocomplete } from "../views/flushAutocomplete.js"
 export const autoCompleteController = async () => {
     const autocompleteList = await getAutocompleteList(getCitySearchValue())
 
-    flushAutocomplete()
+    removeAutocompleteContent()
 
     if (autocompleteList) buildAutocomplete(autocompleteList)
 }
