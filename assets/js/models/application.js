@@ -111,5 +111,5 @@ export const APPLICATION = {
     },
     units: 'metric',
     errorTimeout: 500,
-    inputTimeout: 1500,
+    inputTimeout: 500,
 }
