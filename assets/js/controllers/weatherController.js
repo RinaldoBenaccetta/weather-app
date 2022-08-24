@@ -1,7 +1,7 @@
 import { APPLICATION } from "../models/application.js"
 import { getWeather } from "../models/getWeather.js"
-import { todayWeather } from "../views/todayWeather.js"
-import { flushCardsContainer } from "../views/flushCardsContainer.js"
+import { showTodayWeather } from "../views/todayCards/showTodayWeather.js"
+import { flushCardsContainer } from "../views/todayCards/flushCardsContainer.js"
 import { removeWeatherTitle } from "../views/weatherTitle/removeWeatherTitle.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
@@ -30,11 +30,11 @@ export const weatherController = async () => {
 const WeatherReturn = (weatherCollection, city) => {
     removeAutocompleteContent()
     removeWeatherTitle()
-    flushCardsContainer()
+    // flushCardsContainer()
     // call the weather in view
     showWeatherTitle(city)
     // call the today weather view
-    todayWeather(weatherCollection.today)
+    showTodayWeather(weatherCollection.today)
 }
 
 /**

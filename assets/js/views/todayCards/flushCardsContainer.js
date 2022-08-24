@@ -1,4 +1,4 @@
-import { APPLICATION } from "../models/application.js"
+import { APPLICATION } from "../../models/application.js"
 
 /**
  * Remove the content of the cards container.

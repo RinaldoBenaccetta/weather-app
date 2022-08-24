@@ -1,4 +1,4 @@
-import { APPLICATION } from "../models/application.js"
+import { APPLICATION } from "../../models/application.js"
 
 /**
  * Returns a string containing the HTML of a card, populated with provided datas.
