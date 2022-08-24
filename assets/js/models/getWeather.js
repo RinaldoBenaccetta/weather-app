@@ -1,5 +1,6 @@
 import { weatherQuery } from "./weatherQuery.js"
-import { parseWeatherResponse } from "./parseWeatherResponse.js";
+import { parseWeatherResponse } from "./parseWeatherResponse.js"
+import { APPLICATION } from "../models/application.js";
 
 /**
  * Query the distant API for Weather and return it parsed
@@ -33,4 +34,4 @@ export const getWeather = async (city) => {
  * @param {Array} collection 
  * @returns {Array}
  */
-const todayWeather = collection => collection.slice(0, 8)
+const todayWeather = collection => collection.slice(0, APPLICATION.todayCardsCount)

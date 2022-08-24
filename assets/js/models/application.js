@@ -112,4 +112,5 @@ export const APPLICATION = {
     units: 'metric',
     errorTimeout: 500,
     inputTimeout: 500,
+    todayCardsCount: 8,
 }

@@ -1,4 +1,4 @@
-import { autocompleteRequest } from "./request.js"
+import { autocompleteRequest } from "../request.js"
 
 /**
  * Query API according to the provided string.
