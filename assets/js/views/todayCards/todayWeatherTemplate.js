@@ -7,7 +7,7 @@ import { APPLICATION } from "../../models/application.js"
  * @param {String} id 
  * @returns {String}
  */
-export const mainCardTemplate = (data, id) => {
+export const todayWeatherTemplate = (data, id) => {
     const CLASS = APPLICATION.class.main.card
     const ID = APPLICATION.id.main.cards.card
 

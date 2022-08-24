@@ -1,5 +1,5 @@
 import { APPLICATION } from "../../models/application.js"
-import { mainCardTemplate } from "./mainCardTemplate.js"
+import { todayWeatherTemplate } from "./todayWeatherTemplate.js"
 import { templateElement } from "../templateElement.js"
 
 /**
@@ -9,8 +9,8 @@ import { templateElement } from "../templateElement.js"
  * @param {Object} data 
  * @param {Integer|String} id 
  */
-export const mainCard = (data, id) => {
-    const element = templateElement(mainCardTemplate(data, id))
+export const appendTodayWeatherCard = (data, id) => {
+    const element = templateElement(todayWeatherTemplate(data, id))
     const container = APPLICATION.id.main.cards.container
     const parent = document.querySelector(container)
 

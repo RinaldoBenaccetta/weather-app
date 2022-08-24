@@ -1,7 +1,6 @@
 import { APPLICATION } from "../models/application.js"
 import { getWeather } from "../models/getWeather.js"
 import { showTodayWeather } from "../views/todayCards/showTodayWeather.js"
-import { flushCardsContainer } from "../views/todayCards/flushCardsContainer.js"
 import { removeWeatherTitle } from "../views/weatherTitle/removeWeatherTitle.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
@@ -11,7 +10,7 @@ import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 
 /**
  * Get weather for next 24hours according to provided city
- * and show them in the DOM.
+ * and show them in the DOM. Also show a title with the city searched.
  * 
  * @param {String} city
  */
@@ -30,8 +29,7 @@ export const weatherController = async () => {
 const WeatherReturn = (weatherCollection, city) => {
     removeAutocompleteContent()
     removeWeatherTitle()
-    // flushCardsContainer()
-    // call the weather in view
+    // call the weather title view
     showWeatherTitle(city)
     // call the today weather view
     showTodayWeather(weatherCollection.today)

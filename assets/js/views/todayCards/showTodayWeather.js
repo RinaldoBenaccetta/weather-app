@@ -1,6 +1,6 @@
-import { mainCard } from "./mainCard.js"
+import { appendTodayWeatherCard } from "./appendTodayWeatherCard.js"
 import { formatId } from "../../utils/formatId.js"
-import { flushCardsContainer } from "./flushCardsContainer.js";
+import { removeTodayWeatherContent } from "./removeTodayWeatherContent.js"
 
 /**
  * Show cards in DOM, each card represent 3 hours of prediction.
@@ -9,9 +9,17 @@ import { flushCardsContainer } from "./flushCardsContainer.js";
  */
 export const showTodayWeather = (weatherCollection) => {
     // empty container before add new cards
-    flushCardsContainer()
+    removeTodayWeatherContent()
 
+    buildTodayWeatherCards(weatherCollection)
+}
+
+/**
+ * Build and append all cards in today weather container.
+ * @param {Array} weatherCollection 
+ */
+const buildTodayWeatherCards = (weatherCollection) => {
     weatherCollection.forEach((time, index) => {
-        mainCard(time, formatId(index, 2))
+        appendTodayWeatherCard(time, formatId(index, 2))
     });
 }
