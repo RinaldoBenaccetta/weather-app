@@ -1,5 +1,5 @@
-import { autocompleteItem } from "./autocompleteItem.js"
-import { showAutocomplete } from "../utils/addAutocomplete.js"
+import { appendAutocompleteItem } from "./appendAutocompleteItem.js"
+import { showAutocomplete } from "./showAutocomplete.js"
 
 /**
  * Show autocomplete list in dom.
@@ -8,7 +8,7 @@ import { showAutocomplete } from "../utils/addAutocomplete.js"
  */
 export const buildAutocomplete = (autocompleteCollection) => {
     autocompleteCollection.forEach((city) => {
-        autocompleteItem(city)
+        appendAutocompleteItem(city)
     })
 
     showAutocomplete()

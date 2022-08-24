@@ -1,4 +1,4 @@
-import { APPLICATION } from "../models/application.js";
+import { APPLICATION } from "../../models/application.js";
 
 /**
  * Show autocomplete container by removing the hidden class of it.

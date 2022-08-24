@@ -1,6 +1,6 @@
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 import { getAutocompleteList } from "../models/getAutocompleteList.js"
-import { buildAutocomplete } from "../views/buildAutocomplete.js"
+import { buildAutocomplete } from "../views/autocomplete/buildAutocomplete.js"
 import { flushAutocomplete } from "../views/flushAutocomplete.js"
 
 /**
