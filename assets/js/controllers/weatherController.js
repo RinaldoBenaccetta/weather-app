@@ -2,9 +2,9 @@ import { APPLICATION } from "../models/application.js"
 import { getWeather } from "../models/getWeather.js"
 import { todayWeather } from "../views/todayWeather.js"
 import { flushCardsContainer } from "../views/flushCardsContainer.js"
-import { flushWeatherIn } from "../views/flushWeatherIn.js"
+import { removeWeatherTitle } from "../views/weatherTitle/removeWeatherTitle.js"
 import { classTimeout } from "../utils/classTimeout.js"
-import { weatherIn } from "../views/weatherIn.js"
+import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
@@ -29,10 +29,10 @@ export const weatherController = async () => {
  */
 const WeatherReturn = (weatherCollection, city) => {
     removeAutocompleteContent()
-    flushWeatherIn()
+    removeWeatherTitle()
     flushCardsContainer()
     // call the weather in view
-    weatherIn(city)
+    showWeatherTitle(city)
     // call the today weather view
     todayWeather(weatherCollection.today)
 }
