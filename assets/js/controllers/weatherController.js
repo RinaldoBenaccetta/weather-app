@@ -5,7 +5,7 @@ import { flushCardsContainer } from "../views/flushCardsContainer.js"
 import { flushWeatherIn } from "../views/flushWeatherIn.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js"
-import { removeAutocomplete } from "../utils/removeAutocomplete.js"
+import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 
 /**
@@ -43,6 +43,6 @@ const WeatherReturnError = () => {
     const inputElement = APPLICATION.id.header.searchContainer.container
     const timer = APPLICATION.errorTimeout
 
-    removeAutocomplete()
+    hideAutocomplete()
     classTimeout(errorClass, inputElement, timer)
 }
