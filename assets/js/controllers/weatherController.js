@@ -6,6 +6,7 @@ import { flushWeatherIn } from "../views/flushWeatherIn.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { weatherIn } from "../views/weatherIn.js"
 import { removeAutocomplete } from "../utils/removeAutocomplete.js"
+import { flushAutocomplete } from "../views/flushAutocomplete.js";
 
 /**
  * Get weather for next 24hours according to provided city
@@ -25,6 +26,7 @@ export const weatherController = async (city) => {
  * @param {String} city 
  */
 const WeatherReturn = (weatherCollection, city) => {
+    flushAutocomplete()
     flushWeatherIn()
     flushCardsContainer()
     // call the weather in view
