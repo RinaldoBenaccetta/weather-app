@@ -1,6 +1,6 @@
 import { APPLICATION } from "../../models/application.js"
 import { hideAutocomplete } from "../../views/autocomplete/hideAutocomplete.js"
-import { weatherController } from "../weatherController.js";
+import { weatherController } from "../weatherController.js"
 
 /**
  * Add a listener to the provided element

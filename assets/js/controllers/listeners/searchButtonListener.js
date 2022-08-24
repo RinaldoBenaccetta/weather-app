@@ -1,5 +1,5 @@
 import { APPLICATION } from "../../models/application.js"
-import { weatherController } from "../weatherController.js";
+import { weatherController } from "../weatherController.js"
 
 /**
  * Listen The 'find' button and handle the query.

@@ -1,6 +1,5 @@
 import { autocompleteQuery } from "./autocompleteQuery.js"
 import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js"
-import { trimStart } from "../utils/trimStart.js"
 
 /**
  * Query API for a collection of cities matching the provided string,
@@ -17,7 +16,7 @@ import { trimStart } from "../utils/trimStart.js"
  * @returns {Array|False}
  */
 export const getAutocompleteList = (string) => {
-    string = trimStart(string)
+    string = string.trim()
 
     return string ? processAutocompleteQuery(string) : false
 }
