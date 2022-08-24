@@ -5,8 +5,8 @@ import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js"
  * Query API for a collection of cities matching the provided string,
  * parse the result to return only full names of matching cities.
  * 
- * Before the query, this function remove spaces at start
- * of the provided string to prevent
+ * Before the query, this function remove spaces at start and
+ * end of the provided string for prevent
  * to get a giant list of town if we do an API request
  * with only space.
  * 
