@@ -5,7 +5,6 @@ import { searchButtonListener } from "./controllers/listeners/searchButtonListen
  * Add listener to search button and city input.
  */
 (() => {
-    console.log('test')
     searchButtonListener()
     citySearchInputListener()
 })()
