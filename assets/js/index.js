@@ -1,3 +1,5 @@
+import '../scss/styles.scss'
+
 import { citySearchInputListener } from "./controllers/listeners/citySearchInputListener.js";
 import { searchButtonListener } from "./controllers/listeners/searchButtonListener.js"
 
