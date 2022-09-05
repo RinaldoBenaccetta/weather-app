@@ -9,18 +9,22 @@ import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompl
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 
 /**
- * Get weather for next 24hours according to provided city
+ * Get weather for next 24hours according to provided city or according
+ * to the latitude and longitude if provided.
  * and show them in the DOM. Also show a title with the city searched.
+ *
+ * @param {Object|Null} coordinates
  */
-export const weatherController = async () => {
-    const city = getCitySearchValue()
-    const weatherCollection = await getWeather(city)
+export const weatherController = async (coordinates = null) => {
+    const location = coordinates ? {...coordinates} : { city: getCitySearchValue() }
+    const weatherCollection = await getWeather(location)
 
     weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
 }
 
 /**
  * Show the weather and selected city in DOM.
+ *
  * @param {Array} weatherCollection
  */
 const WeatherReturn = (weatherCollection) => {

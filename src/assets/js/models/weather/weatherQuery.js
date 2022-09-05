@@ -1,16 +1,26 @@
-import { cityWeatherRequest } from "../request.js"
+import {cityWeatherRequestByCoordinates, cityWeatherRequestByName} from "../request.js"
 
 /**
- * Get the weather from API in jon format according to the city provided.
+ * Get the weather from API in jon format according to the location provided.
+ * The location can be an object with a city name or latitude, longitude. If both provided,
+ * the city name prevails.
  * If response code retuned by API is not 200 or if there is an error,
  * return false.
- * 
- * @param {String} city
- * @returns {Object|False} 
+ *
+ * @param {Object} location
+ * @returns {Object|False}
  */
-export const weatherQuery = async (city) => {
+export const weatherQuery = async (location) => {
+    let response
+
     try {
-        const response = await fetch(cityWeatherRequest(city))
+        if ("city" in location) {
+            response = await fetch(cityWeatherRequestByName(location.city))
+        } else if ("lat" in location && "long" in location) {
+            response = await fetch(cityWeatherRequestByCoordinates(location.lat, location.long))
+        } else {
+            return false
+        }
 
         return response.status === 200 ? response.json() : false
 

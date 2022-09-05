@@ -6,11 +6,11 @@ import { APPLICATION } from "../application.js";
  * Query the distant API for Weather and return it parsed
  * ready to be used by view templates.
  *
- * @param {String} city
+ * @param {Object} location
  * @returns {Object}
  */
-export const getWeather = async (city) => {
-    const response = await weatherQuery(city)
+export const getWeather = async (location) => {
+    const response = await weatherQuery(location)
 
     if (response) {
         const weatherCollection = response.list
