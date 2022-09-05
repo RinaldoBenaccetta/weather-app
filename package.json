@@ -3,12 +3,17 @@
     "private": true,
     "version": "0.1.0",
     "type": "module",
+    "browserslist": [
+        "cover 99.5%"
+    ],
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "vite build --emptyOutDir",
         "preview": "vite preview"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.8",
+        "glob": "^8.0.3",
         "sass": "^1.54.8",
         "vite": "^3.0.7"
     }

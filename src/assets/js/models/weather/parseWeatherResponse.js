@@ -1,13 +1,13 @@
 import { formatHour } from "../../utils/formatHour.js"
 import { formatTemp } from "../../utils/formatTemp.js"
 import { formatIcon } from "../../utils/formatIcon.js"
-import { APPLICATION } from "../../models/application.js";
+import { APPLICATION } from "../application.js";
 
 /**
  * Returns a collection of object ready to be used by views.
- * 
- * @param {Array} collection 
- * @param {Object} cityObject 
+ *
+ * @param {Array} collection
+ * @param {Object} cityObject
  * @returns {Array}
  */
 export const parseWeatherResponse = (collection, cityObject) => {
