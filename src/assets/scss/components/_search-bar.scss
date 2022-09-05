@@ -6,6 +6,7 @@
         align-self: center;
 
         width: $search_container_size;
+        max-width: $search_container_max_width;
         height: $default_font_size * 3;
 
         display: flex;

@@ -1,5 +1,5 @@
 @mixin media-screen-large {
-    @media screen and (min-width: ($width-large)) {
+    @media screen and (min-width: ($breakpoint_large_screen)) {
         @content;
     }
 }

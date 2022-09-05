@@ -8,6 +8,12 @@
         overflow: auto;
 
         scroll-snap-type: x mandatory;
+
+        @include media-screen-large {
+            scroll-snap-type: none;
+
+            overflow: hidden;
+        }
     }
 
     &__card {
@@ -18,11 +24,23 @@
         width: 50%;
         height: 60%;
 
+        @include media-screen-large {
+            width: calc((100% - (14 * .5rem) - 2rem)/8); // (container/8 days) - margin
+        }
+
         text-align: center;
 
-        margin: 12.5% 0.5rem 12.5% 0.5rem;
+        margin: 12.5% .5rem 12.5% .5rem;
+
+        @include media-screen-large {
+            margin: 3rem .5rem 0 .5rem;
+        }
 
         scroll-snap-align: center;
+
+        @include media-screen-large {
+            scroll-snap-align: none;
+        }
 
         border-radius: $border_radius;
 
@@ -35,11 +53,22 @@
         &:first-child {
             margin-left: 25%;
 
+            @include media-screen-large {
+                width: calc(12.5% + 1rem) ; // (container/8 days)
+
+                margin-left: 0;
+                //margin-right: 1rem;
+            }
+
             background-color: var(--color_primary_1);
         }
 
         &:last-child {
             margin-right: 25%;
+
+            @include media-screen-large {
+                margin-right: 0;
+            }
         }
 
         &__hour {

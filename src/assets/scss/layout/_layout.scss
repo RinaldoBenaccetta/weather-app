@@ -14,4 +14,10 @@ body {
 .main {
     width: 100%;
     height: 85%;
+
+    @include media-screen-large {
+        max-width: $breakpoint_large_screen;
+
+        margin: auto;
+    }
 }
