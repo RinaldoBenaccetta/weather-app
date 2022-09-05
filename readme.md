@@ -7,15 +7,24 @@
 This project was made in order to train my skills on CSS, Vanilla Javascript, API requests, MVC.
 
 ## App. features
-- Dark/light mode based on user's browser settings.
 
-## Languages used
+- show weather predictions with data's from openweathermap.org
+- Show weather according to user's device location.
+- Dark/light mode according to user's browser settings.
+
+## Project infos
+
+### Languages used
 
 - HTML
 - SCSS
 - Vanilla Javascript
 
-## Architecture
+### Architecture
 
 - MVC
 - BEM
+
+### Bundler
+
+- Vite
