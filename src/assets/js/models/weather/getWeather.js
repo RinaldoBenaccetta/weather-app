@@ -5,7 +5,7 @@ import { APPLICATION } from "../application.js";
 /**
  * Query the distant API for Weather and return it parsed
  * ready to be used by view templates.
- * 
+ *
  * @param {String} city
  * @returns {Object}
  */
@@ -20,7 +20,8 @@ export const getWeather = async (city) => {
 
         return {
             today: todayCollection,
-            all: parsedCollection
+            all: parsedCollection,
+            city: cityObject.name,
         }
     } else {
         return false
@@ -30,8 +31,8 @@ export const getWeather = async (city) => {
 /**
  * Returns a collection representing 24 hours of prediction
  * by slice of 3 hours, so an array of 8 objects.
- * 
- * @param {Array} collection 
+ *
+ * @param {Array} collection
  * @returns {Array}
  */
 const todayWeather = collection => collection.slice(0, APPLICATION.todayCardsCount)

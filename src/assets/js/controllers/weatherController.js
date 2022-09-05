@@ -16,21 +16,20 @@ export const weatherController = async () => {
     const city = getCitySearchValue()
     const weatherCollection = await getWeather(city)
 
-    weatherCollection ? WeatherReturn(weatherCollection, city) : WeatherReturnError()
+    weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
 }
 
 /**
  * Show the weather and selected city in DOM.
  * @param {Array} weatherCollection
- * @param {String} city
  */
-const WeatherReturn = (weatherCollection, city) => {
+const WeatherReturn = (weatherCollection) => {
     removeAutocompleteContent()
     hideAutocomplete()
 
     removeWeatherTitle()
     // call the weather title view
-    showWeatherTitle(city)
+    showWeatherTitle(weatherCollection.city)
     // call the today weather view
     showTodayWeather(weatherCollection.today)
 }
