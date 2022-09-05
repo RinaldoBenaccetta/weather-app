@@ -64,10 +64,6 @@
 
         align-self: flex-start;
 
-        // &:focus {
-        //     border-color: $color_primary_darker;
-        // }
-
         &:focus,
         &:focus + .header__button {
             border-color: var(--color_primary_5);
