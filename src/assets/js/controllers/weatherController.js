@@ -11,8 +11,6 @@ import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 /**
  * Get weather for next 24hours according to provided city
  * and show them in the DOM. Also show a title with the city searched.
- * 
- * @param {String} city
  */
 export const weatherController = async () => {
     const city = getCitySearchValue()
@@ -23,11 +21,13 @@ export const weatherController = async () => {
 
 /**
  * Show the weather and selected city in DOM.
- * @param {Array} weatherCollection 
- * @param {String} city 
+ * @param {Array} weatherCollection
+ * @param {String} city
  */
 const WeatherReturn = (weatherCollection, city) => {
     removeAutocompleteContent()
+    hideAutocomplete()
+
     removeWeatherTitle()
     // call the weather title view
     showWeatherTitle(city)
