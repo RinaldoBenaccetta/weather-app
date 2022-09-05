@@ -34,7 +34,7 @@
 
         padding-bottom: $font_size_small * 0.25;
 
-        color: $color_primary_dark;
+        color: var(--color_primary_4);
         font-weight: 600;
     }
 
@@ -56,11 +56,11 @@
         padding: 0.5rem;
 
         border-radius: $border_radius 0 0 $border_radius;
-        border: $border_size_default solid $color_primary_dark;
+        border: $border_size_default solid var(--color_primary_4);
         outline: none;
         border-right: none;
 
-        background-color: $color-white;
+        background-color: var(--bg_color);
 
         align-self: flex-start;
 
@@ -70,13 +70,12 @@
 
         &:focus,
         &:focus + .header__button {
-            border-color: $color_primary_darker;
-            //background-color: $color_primary_darker;
+            border-color: var(--color_primary_5);
         }
 
         &:focus + .header__button {
-            background-color: $color_primary_darker;
-            color: $color-white;
+            background-color: var(--color_primary_5);
+            color: var(--bg_color);
         }
     }
 
@@ -87,24 +86,24 @@
         padding: 0 $margin_small;
 
         border-radius: 0 $border_radius $border_radius 0;
-        border: $border_size_default solid $color_primary_dark;
+        border: $border_size_default solid var(--color_primary_4);
         border-left: none;
 
         outline: none;
 
-        background-color: $color_white;
+        background-color: var(--bg_color);
 
-        color: $color_primary_darker;
+        color: var(--color_primary_5);
 
         &:active {
-            background-color: $color_primary_light;
-            border-color: $color_primary_light;
-            color: $color_primary_darker;
+            background-color: var(--color_primary_2);
+            border-color: var(--color_primary_2);
+            color: var(--color_primary_5);
         }
 
         &:active + .header__town-input {
-            background-color: $color_primary_darker;
-            color: $color-white;
+            background-color: var(--color_primary_5);
+            color: var(--bg_color);
         }
     }
 }

@@ -7,11 +7,11 @@
         }
 
         &__start {
-            color: $color_primary_dark;
+            color: var(--color_primary_4);
         }
 
         &__city {
-            color: $color_primary_darker;
+            color: var(--color_primary_5);
         }
     }
 }

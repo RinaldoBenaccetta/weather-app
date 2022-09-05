@@ -18,10 +18,10 @@
 
         overflow: scroll;
 
-        border: $border_size_default solid $color_primary_darker;
+        border: $border_size_default solid var(--color_primary_5);
         border-top: none;
 
-        background-color: $color-white;
+        background-color: var(--bg_color);
 
         z-index: 10;
 
@@ -40,7 +40,7 @@
 
             padding: $margin_small;
 
-            border-bottom: $border_size_default solid $color_primary_medium;
+            border-bottom: $border_size_default solid var(--color_primary_3);
         }
     }
 }

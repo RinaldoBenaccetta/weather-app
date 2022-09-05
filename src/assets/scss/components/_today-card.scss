@@ -32,7 +32,7 @@
 
         &:first-child {
             margin-left: 25%;
-            background-color: $color_primary_lighter;
+            background-color: var(--color_primary_1);
         }
 
         &:last-child {
@@ -44,7 +44,7 @@
 
             //margin: $margin_default 0;
 
-            color: $color_primary_dark;
+            color: var(--color_primary_4);
 
             // font-weight: 600;
         }
@@ -61,11 +61,11 @@
             font-size: $font_size_xl;
 
             margin: $margin_large 0 $margin_large $margin_default;
-            color: $color_primary_darker;
+            color: var(--color_primary_5);
         }
 
         &__feel-label {
-            color: $color_primary_dark;
+            color: var(--color_primary_4);
 
             font-size: $font_size_small;
             font-weight: 600;
@@ -75,7 +75,7 @@
             font-size: $font_size_xl;
             margin-left: $margin_default;
 
-            color: $color_primary_dark;
+            color: var(--color_primary_4);
 
             // padding-bottom: $margin_default;
         }

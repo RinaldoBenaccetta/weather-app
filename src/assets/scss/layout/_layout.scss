@@ -2,9 +2,9 @@ body {
     width: 100vw;
     height: 100vh;
 
-    background-color: $color-white;
+    background-color: var(--bg_color);
 
-    color: $color_primary_darker;
+    color: var(--color_primary_5);
 }
 
 .header {

@@ -52,7 +52,7 @@
     display: inline-block;
     width: $icon_size_large;
     height: $icon_size_large;
-    background: black;
+    background: var(--bg_invert_color);
     -webkit-mask-size: cover;
     mask-size: cover;
 
