@@ -63,6 +63,8 @@
 
         background-color: var(--bg_color);
 
+        color: var(--bg_invert_color);
+
         align-self: flex-start;
 
         &:focus,
