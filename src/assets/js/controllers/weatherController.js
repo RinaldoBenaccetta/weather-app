@@ -29,7 +29,7 @@ export const weatherController = async (coordinates = null) => {
  * @param {{all: Array, city: *, today: Array}|boolean} weatherCollection
  */
 const WeatherReturn = (weatherCollection) => {
-    // emptySearchInput()
+    emptySearchInput()
     removeAutocompleteContent()
     hideAutocomplete()
 
