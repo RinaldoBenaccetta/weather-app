@@ -66,11 +66,12 @@
         align-self: flex-start;
 
         &:focus,
-        &:focus + .header__button {
+        &:focus + .header__button + .header__autocomplete {
             border-color: var(--color_primary_5);
         }
 
         &:focus + .header__button {
+            border-color: var(--color_primary_5);
             background-color: var(--color_primary_5);
             color: var(--bg_color);
         }
@@ -90,7 +91,7 @@
 
         background-color: var(--bg_color);
 
-        color: var(--color_primary_5);
+        color: var(--color_primary_4);
 
         &:active {
             background-color: var(--color_primary_2);
