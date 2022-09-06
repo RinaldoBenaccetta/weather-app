@@ -26,7 +26,7 @@ export const weatherController = async (coordinates = null) => {
 /**
  * Show the weather and selected city in DOM.
  *
- * @param {Array} weatherCollection
+ * @param {{all: Array, city: *, today: Array}|boolean} weatherCollection
  */
 const WeatherReturn = (weatherCollection) => {
     // emptySearchInput()
