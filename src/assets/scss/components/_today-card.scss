@@ -82,6 +82,7 @@
 
         &__state {
             font-size: $font_size_small;
+            //color: var(--bg_invert_color);
         }
 
         &__temperature {
@@ -89,7 +90,7 @@
 
             margin: $margin_large 0 $margin_large $margin_default;
 
-            color: var(--color_primary_5);
+            color: var(--bg_invert_color);
         }
 
         &__feel-label {
