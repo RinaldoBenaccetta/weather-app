@@ -6,7 +6,6 @@ import { classTimeout } from "../utils/classTimeout.js"
 import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
-import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 import { emptySearchInput } from "../utils/emptySearchInput.js"
 
 /**
@@ -14,10 +13,9 @@ import { emptySearchInput } from "../utils/emptySearchInput.js"
  * to the latitude and longitude if provided.
  * and show them in the DOM. Also show a title with the city searched.
  *
- * @param {Object|Null} coordinates
+ * @param {Object|Null} location
  */
-export const weatherController = async (coordinates = null) => {
-    const location = coordinates ? {...coordinates} : { city: getCitySearchValue() }
+export const weatherController = async (location) => {
     const weatherCollection = await getWeather(location)
 
     weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
@@ -26,7 +24,8 @@ export const weatherController = async (coordinates = null) => {
 /**
  * Show the weather and selected city in DOM.
  *
- * @param {{all: Array, city: *, today: Array}|boolean} weatherCollection
+ * @param weatherCollection
+ * @constructor
  */
 const WeatherReturn = (weatherCollection) => {
     emptySearchInput()

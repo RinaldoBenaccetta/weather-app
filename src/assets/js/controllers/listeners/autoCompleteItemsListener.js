@@ -24,7 +24,7 @@ const autoCompleteItemsHandler = async (element) => {
 
     replaceSearchByAutocomplete(newValue)
     await autoCompleteController('close')
-    await weatherController()
+    await weatherController({city: newValue})
 }
 
 /**
