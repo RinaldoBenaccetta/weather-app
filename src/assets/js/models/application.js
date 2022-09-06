@@ -1,5 +1,7 @@
 /**
- * An object containg application datas.
+ * An object containing application data's.
+ *
+ * @type {{errorTimeout: number, todayCardsCount: number, externalApi: {key: string}, id: {footer: {container: string, card: {container: string, icon: string, maxTemp: string, state: string, day: string, minTemp: string}}, header: {container: string, searchContainer: {container: string, search: string, autocomplete: {container: string, list: string}, townInput: string}}, main: {container: string, cards: {container: string, card: {container: string, temp: string, hour: string, icon: string, feel: string, state: string}}, localisation: string}}, units: string, class: {hidden: string, footer: {container: string, card: {container: string, icon: string, maxTemp: string, state: string, day: string, minTemp: string}}, header: {container: string, searchContainer: {container: string, search: string, autocomplete: {container: string, list: {container: string, item: string}}, townInput: string}}, main: {container: string, localisation: string, card: {container: string, temp: string, hour: string, feelLabel: string, icon: string, feel: string, state: string}}, error: string, icons: {weather: string[][], empty: string}}, inputTimeout: number}}
  */
 export const APPLICATION = {
     id: {
