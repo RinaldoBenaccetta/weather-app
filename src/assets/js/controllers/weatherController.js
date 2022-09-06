@@ -7,6 +7,7 @@ import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
+import { emptySearchInput } from "../utils/emptySearchInput.js"
 
 /**
  * Get weather for next 24hours according to provided city or according
@@ -28,6 +29,7 @@ export const weatherController = async (coordinates = null) => {
  * @param {Array} weatherCollection
  */
 const WeatherReturn = (weatherCollection) => {
+    // emptySearchInput()
     removeAutocompleteContent()
     hideAutocomplete()
 
