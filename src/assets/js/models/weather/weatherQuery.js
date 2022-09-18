@@ -8,7 +8,7 @@ import {cityWeatherRequestByCoordinates, cityWeatherRequestByName} from "../requ
  * return false.
  *
  * @param {Object} location
- * @returns {Object|False}
+ * @returns {Object|false}
  */
 export const weatherQuery = async (location) => {
     let response

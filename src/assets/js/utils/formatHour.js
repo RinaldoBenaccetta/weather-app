@@ -1,7 +1,7 @@
 /**
- * Returns formated string hour from date string.
- * 
- * @param {Number|String} date 
+ * Returns formatted string hour from date string.
+ *
+ * @param {Number|String} date
  * @returns {String}
  */
 export const formatHour = (date) => {

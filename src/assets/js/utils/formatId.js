@@ -1,8 +1,9 @@
 /**
  * Return provided number to a provided digits String.
  * Eg. : 42 become 0042 with 4 digits length
- * 
- * @param {Integer} id 
+ *
+ * @param {Number} id
+ * @param {Number} digitLength
  * @returns {String}
  */
 export const formatId = (id, digitLength) => {

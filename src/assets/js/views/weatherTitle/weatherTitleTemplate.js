@@ -1,8 +1,6 @@
-// import { APPLICATION } from "../../models/application.js"
-
 /**
- * Returns a string containing the HTML of a weather in, populated with provided datas.
- * 
+ * Returns a string containing the HTML of a weather in, populated with provided data's.
+ *
  * @param {String} city
  * @returns {String}
  */

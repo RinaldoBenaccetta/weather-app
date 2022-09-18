@@ -1,10 +1,10 @@
 import { APPLICATION } from "../../models/application.js"
 
 /**
- * Returns a string containing the HTML of a card, populated with provided datas.
- * 
- * @param {Object} data 
- * @param {String} id 
+ * Returns a string containing the HTML of a card, populated with provided data's.
+ *
+ * @param {Object} data
+ * @param {String} id
  * @returns {String}
  */
 export const todayWeatherTemplate = (data, id) => {

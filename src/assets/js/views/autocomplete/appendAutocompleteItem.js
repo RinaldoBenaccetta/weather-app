@@ -6,9 +6,8 @@ import { ELEMENTS } from "../../models/elements.js";
 /**
  * Add a city item in autocomplete DOM element.
  * The item is templated according to autocompleteItemTemplate.
- * 
- * @param {String} city 
- * @param {Integer|String} id 
+ *
+ * @param {String} city
  */
 export const appendAutocompleteItem = (city) => {
     const element = templateElement(autocompleteItemTemplate(city))
