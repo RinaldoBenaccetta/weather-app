@@ -3,6 +3,9 @@ import {formatTemp} from "../../utils/formatTemp.js"
 import {formatIcon} from "../../utils/formatIcon.js"
 import {APPLICATION} from "../application.js";
 
+import { WeatherSlice } from "../../types/weatherApiResponse.js"
+import { WeatherInCity } from "../../types/weatherApiResponse.js"
+
 /**
  * Returns a collection of object ready to be used by views.
  *
@@ -10,10 +13,10 @@ import {APPLICATION} from "../application.js";
  * @param {Object} cityObject
  * @returns {Array}
  */
-export const parseWeatherResponse = (collection, cityObject) => {
+export const parseWeatherResponse = (collection: WeatherSlice[], cityObject: WeatherInCity) => {
     const iconList = APPLICATION.class.icons.weather
 
-    return collection.map((day) => {
+    return collection.map((day: WeatherSlice) => {
         return {
             // provided by API timestamp is in UNIX
             hour: formatHour((day.dt - cityObject.timezone) * 1000),

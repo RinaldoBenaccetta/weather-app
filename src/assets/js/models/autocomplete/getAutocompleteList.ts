@@ -1,5 +1,5 @@
-import {autocompleteQuery} from "./autocompleteQuery.js"
-import {parseAutocompleteResponse} from "./parseAutocompleteResponse.js"
+import { autocompleteQuery } from "./autocompleteQuery.js"
+import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js"
 
 /**
  * Query API for a collection of cities matching the provided string,
@@ -15,7 +15,7 @@ import {parseAutocompleteResponse} from "./parseAutocompleteResponse.js"
  * @param {String} string
  * @returns {Array|false}
  */
-export const getAutocompleteList = (string) => {
+export const getAutocompleteList = (string: string): Promise<Promise<Array<any>> | false> | false => {
     string = string.trim()
 
     return string ? processAutocompleteQuery(string) : false
@@ -29,11 +29,12 @@ export const getAutocompleteList = (string) => {
  * @param {String} string
  * @returns {Array}
  */
-const processAutocompleteQuery = async (string) => {
+const processAutocompleteQuery = async (string: string): Promise<Promise<Array<any>> | false> => {
     const response = await autocompleteQuery(string)
 
     if (response) {
         const autocompleteCollection = response._embedded["city:search-results"]
+
         return parseAutocompleteResponse(autocompleteCollection)
     } else {
         return false

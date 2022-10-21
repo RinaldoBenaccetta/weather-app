@@ -4,7 +4,7 @@ import { buildAutocomplete } from "../views/autocomplete/buildAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 import { autocompleteListener } from "./listeners/autocompleteListener.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
-import {removeAutocompleteItemsListener} from "./listeners/removeAutocompleteItemsListener.js"
+import { removeAutocompleteItemsListener } from "./listeners/removeAutocompleteItemsListener.js"
 
 /**
  * If close tag is not provided, open the autocomplete in DOM.
