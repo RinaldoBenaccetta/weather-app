@@ -13,7 +13,7 @@ export const citySearchInputListener = () => ELEMENTS.citySearchInput.addEventLi
  * call the autocompletion controller
  * and add a new listener to the input.
  */
-const inputListener = () => {
+const inputListener = ():void => {
     ELEMENTS.citySearchInput.removeEventListener('keyup', inputListener)
 
     delayedCallAutocomplete()
@@ -23,7 +23,7 @@ const inputListener = () => {
 /**
  * Call autocomplete controller after a delay.
  */
-const delayedCallAutocomplete = () => {
+const delayedCallAutocomplete = ():void => {
     setTimeout(() => autoCompleteController()
         , APPLICATION.inputTimeout)
 }
@@ -31,7 +31,7 @@ const delayedCallAutocomplete = () => {
 /**
  * Start the city search listener after a delay.
  */
-const delayedStartListener = () => {
+const delayedStartListener = ():void => {
     setTimeout(() => citySearchInputListener()
         , APPLICATION.inputTimeout)
 }

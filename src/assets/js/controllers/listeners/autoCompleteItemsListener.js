@@ -1,5 +1,5 @@
 import {APPLICATION} from "../../models/application.js"
-import {weatherController} from "../weatherController.js"
+import {weatherController} from "../weatherController.ts"
 import {autoCompleteController} from "../autocompleteController.js"
 
 /**

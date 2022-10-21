@@ -3,7 +3,7 @@ import { APPLICATION } from "./application.js"
 /**
  * Return the weather request by city ready to send to the API.
  *
- * @param {String} city
+ * @param {string} city
  * @returns {String}
  */
 export const cityWeatherRequestByName = (city) => `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APPLICATION.externalApi.key}&units=${APPLICATION.units}`

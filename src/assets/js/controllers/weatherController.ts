@@ -8,14 +8,16 @@ import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
 import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 import { emptySearchInput } from "../utils/emptySearchInput.js"
 
+import { Location } from "../types/location"
+
 /**
  * Get weather for next 24hours according to provided city or according
  * to the latitude and longitude if provided.
  * and show them in the DOM. Also show a title with the city searched.
  *
- * @param {Object|Null} location
+ * @param {Object} location
  */
-export const weatherController = async (location) => {
+export const weatherController = async (location: Location):Promise<void> => {
     const weatherCollection = await getWeather(location)
 
     weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
@@ -27,7 +29,7 @@ export const weatherController = async (location) => {
  * @param weatherCollection
  * @constructor
  */
-const WeatherReturn = (weatherCollection) => {
+const WeatherReturn = (weatherCollection):void => {
     emptySearchInput()
     removeAutocompleteContent()
     hideAutocomplete()
@@ -42,7 +44,7 @@ const WeatherReturn = (weatherCollection) => {
 /**
  * Add an error class to the search input when API send an error.
  */
-const WeatherReturnError = () => {
+const WeatherReturnError = ():void => {
     const errorClass = APPLICATION.class.error
     const inputElement = APPLICATION.id.header.searchContainer.container
     const timer = APPLICATION.errorTimeout

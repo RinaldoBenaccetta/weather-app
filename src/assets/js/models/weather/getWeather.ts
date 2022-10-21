@@ -1,6 +1,10 @@
 import { weatherQuery } from "./weatherQuery.js"
 import { parseWeatherResponse } from "./parseWeatherResponse.js"
-import { APPLICATION } from "../application.js";
+import { APPLICATION } from "../application.js"
+
+import { Location } from "../../types/location"
+import { WeatherCollection} from "../../types/weatherCollection"
+import { WeatherApiResponse} from "../../types/weatherApiResponse"
 
 /**
  * Query the distant API for Weather and return it parsed
@@ -9,8 +13,10 @@ import { APPLICATION } from "../application.js";
  * @param {Object} location
  * @returns {Object}
  */
-export const getWeather = async (location) => {
-    const response = await weatherQuery(location)
+export const getWeather = async (location: Location): Promise<Promise<WeatherCollection> | false> => {
+    const response: WeatherApiResponse|false = await weatherQuery(location)
+
+    console.log(response)
 
     if (response) {
         const weatherCollection = response.list
@@ -35,4 +41,4 @@ export const getWeather = async (location) => {
  * @param {Array} collection
  * @returns {Array}
  */
-const todayWeather = collection => collection.slice(0, APPLICATION.todayCardsCount)
+const todayWeather = (collection: string|number[])=> collection.slice(0, APPLICATION.todayCardsCount)
