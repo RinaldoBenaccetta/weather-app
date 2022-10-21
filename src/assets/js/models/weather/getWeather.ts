@@ -16,8 +16,6 @@ import { WeatherApiResponse} from "../../types/weatherApiResponse"
 export const getWeather = async (location: Location): Promise<Promise<WeatherCollection> | false> => {
     const response: WeatherApiResponse|false = await weatherQuery(location)
 
-    console.log(response)
-
     if (response) {
         const weatherCollection = response.list
         const cityObject = response.city
@@ -28,7 +26,7 @@ export const getWeather = async (location: Location): Promise<Promise<WeatherCol
             today: todayCollection,
             all: parsedCollection,
             city: cityObject.name,
-        }
+        } as WeatherCollection
     } else {
         return false
     }

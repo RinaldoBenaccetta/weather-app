@@ -17,9 +17,9 @@ export const weatherQuery = async (location: Location): Promise<WeatherApiRespon
     let response
 
     try {
-        if ("city" in location) {
+        if ("city" in location && location.city) {
             response = await fetch(cityWeatherRequestByName(location.city))
-        } else if ("lat" in location && "long" in location) {
+        } else if ("lat" in location && "long" in location && (location.lat && location.long)) {
             response = await fetch(cityWeatherRequestByCoordinates(location.lat, location.long))
         } else {
             return false
