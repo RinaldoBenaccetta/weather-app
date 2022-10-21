@@ -1,6 +1,6 @@
 import {APPLICATION} from "../../models/application.js"
 import {weatherController} from "../weatherController.ts"
-import {autoCompleteController} from "../autocompleteController.js"
+import {autoCompleteController} from "../autocompleteController.ts"
 
 /**
  * Add a listener to the provided element

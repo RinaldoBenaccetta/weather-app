@@ -13,7 +13,7 @@ import {removeAutocompleteItemsListener} from "./listeners/removeAutocompleteIte
  * @param close
  * @returns {Promise<void>}
  */
-export const autoCompleteController = async (close = null) => {
+export const autoCompleteController = async (close: "close"|null = null): Promise<void> => {
     close ? closeAutocomplete() : await openAutocomplete()
 }
 
@@ -22,7 +22,7 @@ export const autoCompleteController = async (close = null) => {
  *
  * @returns {Promise<void>}
  */
-const openAutocomplete = async () => {
+const openAutocomplete = async (): Promise<void> => {
     const autocompleteList = await getAutocompleteList(getCitySearchValue())
 
     removeAutocompleteContent()
@@ -36,7 +36,7 @@ const openAutocomplete = async () => {
 /**
  * Remove the autocomplete content and hide it.
  */
-const closeAutocomplete = () => {
+const closeAutocomplete = (): void => {
     removeAutocompleteItemsListener()
     removeAutocompleteContent()
     hideAutocomplete()

@@ -4,7 +4,11 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM",
+      "dom"
+    ],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,

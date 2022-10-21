@@ -5,22 +5,27 @@ import {autoCompleteController} from "../autocompleteController.js"
 /**
  * Listen for click on an item from the autocomplete.
  */
-export const autocompleteListener = () => {
-    ELEMENTS.body.addEventListener('click', (e) => autocompleteClickOutsideHandler(e))
+export const autocompleteListener = (): void => {
+    ELEMENTS.body?.addEventListener('click', (e: Event) => autocompleteClickOutsideHandler(e))
 }
 
-const removeAutocompleteListener = () => {
-    ELEMENTS.body.removeEventListener('click', (e) => autocompleteClickOutsideHandler(e))
+/**
+ * Remove the autocomplete listener.
+ */
+const removeAutocompleteListener = (): void => {
+    ELEMENTS.body?.removeEventListener('click', (e: Event) => autocompleteClickOutsideHandler(e))
 }
 
 /**
  * If user click outside the autocomplete, remove autocomplete listener and close autocomplete.
  *
- * @param e
+ * @param {Event} e
  * @returns {Promise<void>}
  */
-const autocompleteClickOutsideHandler = async (e) => {
-    if (isClickedOutsideAutocomplete(e.target)) {
+const autocompleteClickOutsideHandler = async (e: Event): Promise<void> => {
+    const target = e.target as HTMLLabelElement
+
+    if (target && isClickedOutsideAutocomplete(target)) {
         removeAutocompleteListener()
         await autoCompleteController('close')
     }
@@ -29,10 +34,10 @@ const autocompleteClickOutsideHandler = async (e) => {
 /**
  * Check if user have clicked outside the autocomplete container.
  *
- * @param target
+ * @param {HTMLLabelElement} target
  * @returns {boolean}
  */
-const isClickedOutsideAutocomplete = (target) => {
+const isClickedOutsideAutocomplete = (target: HTMLLabelElement): boolean => {
     return (
         target !== ELEMENTS.autocompleteContainer
         && target !== ELEMENTS.autocompleteList

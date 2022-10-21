@@ -5,4 +5,4 @@ import { getCitySearchValue } from "../../utils/getCitySearchValue.js"
 /**
  * Listen The 'find' button and handle the query.
  */
-export const searchButtonListener = () => ELEMENTS.searchButton.addEventListener('click', () => weatherController({city: getCitySearchValue()}))
+export const searchButtonListener = ():void => ELEMENTS.searchButton?.addEventListener('click', () => weatherController({city: getCitySearchValue()}))

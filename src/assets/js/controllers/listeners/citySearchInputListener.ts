@@ -5,7 +5,7 @@ import { autoCompleteController } from "../autocompleteController.js"
 /**
  * Add a listener on search input on keyup
  */
-export const citySearchInputListener = () => ELEMENTS.citySearchInput.addEventListener('keyup', inputListener)
+export const citySearchInputListener = ():void => ELEMENTS.citySearchInput?.addEventListener('keyup', citySearchInputHandler)
 
 /**
  * Remove listener on the search input,
@@ -13,8 +13,8 @@ export const citySearchInputListener = () => ELEMENTS.citySearchInput.addEventLi
  * call the autocompletion controller
  * and add a new listener to the input.
  */
-const inputListener = ():void => {
-    ELEMENTS.citySearchInput.removeEventListener('keyup', inputListener)
+const citySearchInputHandler = ():void => {
+    ELEMENTS.citySearchInput?.removeEventListener('keyup', citySearchInputHandler)
 
     delayedCallAutocomplete()
     delayedStartListener()
