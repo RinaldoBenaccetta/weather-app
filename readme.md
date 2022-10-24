@@ -18,9 +18,10 @@ This project is a small scale laboratory to train and test on UX, UI, API reques
 
 ### Languages used
 
+- Vanilla Javascript
+- Typescript
 - HTML
 - SCSS
-- Vanilla Javascript
 
 ### Architecture
 
