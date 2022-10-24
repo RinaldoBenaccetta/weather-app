@@ -5,6 +5,6 @@ import { APPLICATION } from "../models/application.js"
  *
  * @returns {NodeListOf<Element>}
  */
-export const getAutocompleteItems = () => {
+export const getAutocompleteItems = (): NodeListOf<Element> => {
     return document.querySelectorAll('.' + APPLICATION.class.header.searchContainer.autocomplete.list.item)
 }
