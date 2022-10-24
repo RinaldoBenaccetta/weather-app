@@ -9,8 +9,8 @@ import { templateElement } from "../templateElement.js"
  *
  * @param {String} city
  */
-export const showWeatherTitle = (city) => {
-    const titleElement = templateElement(weatherTitleTemplate(city))
+export const showWeatherTitle = (city: string): void => {
+    const titleElement: Node = templateElement(weatherTitleTemplate(city))
 
     ELEMENTS.weatherTitleContainer.appendChild(titleElement)
 }
