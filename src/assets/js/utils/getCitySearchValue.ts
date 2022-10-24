@@ -5,4 +5,8 @@ import { ELEMENTS } from "../models/elements.js"
  *
  * @returns {String}
  */
-export const getCitySearchValue = (): string => ELEMENTS.citySearchInput.value
+export const getCitySearchValue = (): string | undefined => {
+    const citySearchInput = ELEMENTS.citySearchInput as HTMLInputElement
+
+    return citySearchInput.value
+}
