@@ -2,7 +2,7 @@
  * Returns a node element from the provided HTML string.
  *
  * InnerHTML only add first element of the template,
- * so the template must content a wrapping element to sho
+ * so the template must content a wrapping element to show
  * all elements in template,
  * that make a div in a div that is not nice.
  * To counter that, we place it in a template element
@@ -12,12 +12,11 @@
  * @param {String} html
  * @returns {Node}
  */
-export const templateElement = (html) => {
-    let template = document.createElement('template')
+export const templateElement = (html: string): Node => {
+    let template: HTMLTemplateElement = document.createElement('template')
 
     // Never return a space text node as a result
-    html = html.trim()
-    template.innerHTML = html
+    template.innerHTML = html.trim()
 
     return template.content.childNodes[0]
 }
