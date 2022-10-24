@@ -1,10 +1,11 @@
 import { getCitySearchValue } from "../utils/getCitySearchValue.js"
 import { getAutocompleteList } from "../models/autocomplete/getAutocompleteList.js"
 import { buildAutocomplete } from "../views/autocomplete/buildAutocomplete.js"
-import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
 import { autocompleteListener } from "./listeners/autocompleteListener.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
-import {removeAutocompleteItemsListener} from "./listeners/autoCompleteItemsListener";
+import { removeAutocompleteItemsListener } from "./listeners/autoCompleteItemsListener"
+import { ELEMENTS } from "../models/elements"
+import { removeElementContent } from "../utils/removeElementContent"
 
 /**
  * If close tag is not provided, open the autocomplete in DOM.
@@ -25,7 +26,7 @@ export const autoCompleteController = async (close: "close"|null = null): Promis
 const openAutocomplete = async (): Promise<void> => {
     const autocompleteList = await getAutocompleteList(getCitySearchValue())
 
-    removeAutocompleteContent()
+    removeElementContent(ELEMENTS.autocompleteList)
 
     if (autocompleteList) {
         buildAutocomplete(autocompleteList)
@@ -38,6 +39,6 @@ const openAutocomplete = async (): Promise<void> => {
  */
 const closeAutocomplete = (): void => {
     removeAutocompleteItemsListener()
-    removeAutocompleteContent()
+    removeElementContent(ELEMENTS.autocompleteList)
     hideAutocomplete()
 }

@@ -4,13 +4,12 @@ import { showTodayWeather } from "../views/todayCards/showTodayWeather.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
-import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompleteContent.js"
+import { removeElementContent } from "../utils/removeElementContent"
+import { ELEMENTS } from "../models/elements"
 import { emptySearchInput } from "../utils/emptySearchInput.js"
 
 import { Location } from "../types/location"
-import { WeatherCollection } from "../types/weatherCollection";
-import {removeElementContent} from "../utils/removeElementContent";
-import {ELEMENTS} from "../models/elements";
+import { WeatherCollection } from "../types/weatherCollection"
 
 /**
  * Get weather for next 24hours according to provided city or according
@@ -33,7 +32,8 @@ export const weatherController = async (location: Location): Promise<void> => {
  */
 const WeatherReturn = (weatherCollection: WeatherCollection): void => {
     emptySearchInput()
-    removeAutocompleteContent()
+    // removeAutocompleteContent()
+    removeElementContent(ELEMENTS.autocompleteList)
     hideAutocomplete()
 
     removeElementContent(ELEMENTS.weatherTitleContainer)
