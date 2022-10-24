@@ -1,13 +1,14 @@
 import { APPLICATION } from "../../models/application.js"
+import { ParsedWeatherSlice } from "../../types/weatherCollection";
 
 /**
  * Returns a string containing the HTML of a card, populated with provided data's.
  *
  * @param {Object} data
- * @param {String} id
+ * @param {number | string} id
  * @returns {String}
  */
-export const todayWeatherTemplate = (data, id) => {
+export const todayWeatherTemplate = (data: ParsedWeatherSlice, id: number | string): string => {
     const CLASS = APPLICATION.class.main.card
     const ID = APPLICATION.id.main.cards.card
 
