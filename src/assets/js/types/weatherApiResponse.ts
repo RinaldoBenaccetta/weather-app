@@ -1,12 +1,12 @@
 export type WeatherApiResponse = {
-    city: WeatherInCity,
+    city: WeatherApiInCity,
     cnt: number,
     cod: string,
-    list: WeatherSlice[],
+    list: WeatherApiSlice[],
     message: 0|string,
 }
 
-export type WeatherInCity = {
+export type WeatherApiInCity = {
     coord: {
         lat: number,
         long: number
@@ -20,7 +20,7 @@ export type WeatherInCity = {
     timezone: number
 }
 
-export type WeatherSlice = {
+export type WeatherApiSlice = {
     clouds: {
         all: number
     },
