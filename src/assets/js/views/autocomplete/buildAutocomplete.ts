@@ -3,11 +3,11 @@ import { showAutocomplete } from "./showAutocomplete.js"
 
 /**
  * Show autocomplete list in dom.
- * 
+ *
  * @param {Array} autocompleteCollection - Collection containing all cities items.
  */
-export const buildAutocomplete = (autocompleteCollection) => {
-    autocompleteCollection.forEach((city) => {
+export const buildAutocomplete = (autocompleteCollection: string[]): void => {
+    autocompleteCollection.forEach((city: string) => {
         appendAutocompleteItem(city)
     })
 

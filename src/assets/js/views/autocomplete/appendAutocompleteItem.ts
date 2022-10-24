@@ -9,8 +9,8 @@ import { ELEMENTS } from "../../models/elements.js";
  *
  * @param {String} city
  */
-export const appendAutocompleteItem = (city) => {
-    const element = templateElement(autocompleteItemTemplate(city))
+export const appendAutocompleteItem = (city: string): void => {
+    const element = templateElement(autocompleteItemTemplate(city)) as HTMLLIElement
 
     ELEMENTS.autocompleteList.appendChild(element)
 
