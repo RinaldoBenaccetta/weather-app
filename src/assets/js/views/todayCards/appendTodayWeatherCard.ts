@@ -13,5 +13,5 @@ import { ParsedWeatherSlice } from "../../types/weatherCollection";
 export const appendTodayWeatherCard = (data: ParsedWeatherSlice, id: number | string) => {
     const element = templateElement(todayWeatherTemplate(data, id)) as HTMLDivElement
 
-    ELEMENTS.todayCardsContainer.appendChild(element)
+    ELEMENTS.todayCardsContainer?.appendChild(element)
 }

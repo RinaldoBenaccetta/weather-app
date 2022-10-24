@@ -7,5 +7,5 @@ import { ELEMENTS } from "../../models/elements.js"
 export const showAutocomplete = (): void => {
     const hiddenClass: string = APPLICATION.class.hidden
 
-    ELEMENTS.autocompleteContainer.classList.remove(hiddenClass)
+    ELEMENTS.autocompleteContainer?.classList.remove(hiddenClass)
 }

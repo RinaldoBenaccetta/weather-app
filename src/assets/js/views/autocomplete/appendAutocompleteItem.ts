@@ -12,7 +12,7 @@ import { ELEMENTS } from "../../models/elements.js";
 export const appendAutocompleteItem = (city: string): void => {
     const element = templateElement(autocompleteItemTemplate(city)) as HTMLLIElement
 
-    ELEMENTS.autocompleteList.appendChild(element)
+    ELEMENTS.autocompleteList?.appendChild(element)
 
     autoCompleteItemsListener(element)
 }

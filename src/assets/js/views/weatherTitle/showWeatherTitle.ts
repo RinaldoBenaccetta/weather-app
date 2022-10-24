@@ -12,5 +12,5 @@ import { templateElement } from "../templateElement.js"
 export const showWeatherTitle = (city: string): void => {
     const titleElement: Node = templateElement(weatherTitleTemplate(city))
 
-    ELEMENTS.weatherTitleContainer.appendChild(titleElement)
+    ELEMENTS.weatherTitleContainer?.appendChild(titleElement)
 }
