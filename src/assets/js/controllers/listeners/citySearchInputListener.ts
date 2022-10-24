@@ -9,7 +9,7 @@ export const citySearchInputListener = ():void => ELEMENTS.citySearchInput?.addE
 
 /**
  * Remove listener on the search input,
- * add a delay provided by APPLICATION settings,
+ * add a delay provided by Application settings,
  * call the autocompletion controller
  * and add a new listener to the input.
  */

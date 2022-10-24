@@ -1,5 +1,5 @@
 import { ELEMENTS } from "../../models/elements.js"
-import { weatherTitleTemplate } from "./weatherTitleTemplate.js"
+import { weatherTitleTemplate } from "../../templates/weatherTitleTemplate.js"
 import { templateElement } from "../templateElement.js"
 
 /**

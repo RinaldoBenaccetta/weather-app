@@ -35,7 +35,7 @@ export const getWeather = async (location: Location): Promise<WeatherCollection 
 /**
  * Returns a collection representing 24 hours of prediction
  * by slice of 3 hours, The number of cards is set
- * in settings at APPLICATION.todayCardsCount
+ * in settings at Application.todayCardsCount
  *
  * @param {Array} collection
  * @returns {Array}

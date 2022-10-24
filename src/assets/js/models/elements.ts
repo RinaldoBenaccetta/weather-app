@@ -1,21 +1,25 @@
 import { APPLICATION } from "./application.js"
 
+type Elements = {
+    [key: string]: Element | undefined
+}
+
 /**
  * Return the DOM element corresponding to provided selector.
  *
  * @param id
  * @returns {Element}
  */
-const getElement = (id) => {
-    return document.querySelector(id)
+const getElement = (id: string): Element | undefined => {
+    const element = document.querySelector(id)
+
+    return element ? element : undefined
 }
 
 /**
  * An object with elements of the DOM.
- *
- * @type {{mainContainer: Element, footerContainer: Element, autocompleteList: Element, todayCardsContainer: Element, weatherTitleContainer: Element, searchButton: Element, citySearchInput: Element, headerContainer: Element, autocompleteContainer: Element, main: Element, body: HTMLElement}}
  */
-export const ELEMENTS = {
+export const ELEMENTS: Elements = {
     body: document.body,
     main: getElement(APPLICATION.id.main.container),
     headerContainer: getElement(APPLICATION.id.header.container),

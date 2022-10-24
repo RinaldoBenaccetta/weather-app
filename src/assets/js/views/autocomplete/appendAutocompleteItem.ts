@@ -1,4 +1,4 @@
-import { autocompleteItemTemplate } from "./autocompleteItemTemplate.js"
+import { autocompleteItemTemplate } from "../../templates/autocompleteItemTemplate.js"
 import { templateElement } from "../templateElement.js"
 import { autoCompleteItemsListener } from "../../controllers/listeners/autoCompleteItemsListener.js"
 import { ELEMENTS } from "../../models/elements.js";

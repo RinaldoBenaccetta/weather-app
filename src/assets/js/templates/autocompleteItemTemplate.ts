@@ -1,4 +1,4 @@
-import { APPLICATION } from "../../models/application.js"
+import { APPLICATION } from "../models/application.js"
 
 /**
  * Template the provided string on a LI element

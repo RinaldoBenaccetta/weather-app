@@ -1,4 +1,4 @@
-import { todayWeatherTemplate } from "./todayWeatherTemplate.js"
+import { todayWeatherTemplate } from "../../templates/todayWeatherTemplate.js"
 import { templateElement } from "../templateElement.js"
 import { ELEMENTS } from "../../models/elements.js";
 import { ParsedWeatherSlice } from "../../types/weatherCollection";

@@ -1,5 +1,5 @@
-import { APPLICATION } from "../../models/application.js"
-import { ParsedWeatherSlice } from "../../types/weatherCollection";
+import { APPLICATION } from "../models/application.js"
+import { ParsedWeatherSlice } from "../types/weatherCollection";
 
 /**
  * Returns a string containing the HTML of a card, populated with provided data's.

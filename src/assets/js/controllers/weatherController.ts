@@ -9,6 +9,7 @@ import { removeAutocompleteContent } from "../views/autocomplete/removeAutocompl
 import { emptySearchInput } from "../utils/emptySearchInput.js"
 
 import { Location } from "../types/location"
+import { WeatherCollection } from "../types/weatherCollection";
 
 /**
  * Get weather for next 24hours according to provided city or according
@@ -17,8 +18,8 @@ import { Location } from "../types/location"
  *
  * @param {Object} location
  */
-export const weatherController = async (location: Location):Promise<void> => {
-    const weatherCollection = await getWeather(location)
+export const weatherController = async (location: Location): Promise<void> => {
+    const weatherCollection: WeatherCollection | false = await getWeather(location)
 
     weatherCollection ? WeatherReturn(weatherCollection) : WeatherReturnError()
 }
@@ -29,7 +30,7 @@ export const weatherController = async (location: Location):Promise<void> => {
  * @param weatherCollection
  * @constructor
  */
-const WeatherReturn = (weatherCollection):void => {
+const WeatherReturn = (weatherCollection: WeatherCollection): void => {
     emptySearchInput()
     removeAutocompleteContent()
     hideAutocomplete()
@@ -44,10 +45,10 @@ const WeatherReturn = (weatherCollection):void => {
 /**
  * Add an error class to the search input when API send an error.
  */
-const WeatherReturnError = ():void => {
-    const errorClass = APPLICATION.class.error
-    const inputElement = APPLICATION.id.header.searchContainer.container
-    const timer = APPLICATION.errorTimeout
+const WeatherReturnError = (): void => {
+    const errorClass: string = APPLICATION.class.error
+    const inputElement: string = APPLICATION.id.header.searchContainer.container
+    const timer: number = APPLICATION.errorTimeout
 
     hideAutocomplete()
     classTimeout(errorClass, inputElement, timer)
