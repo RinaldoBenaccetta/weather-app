@@ -15,10 +15,10 @@ import { parseAutocompleteResponse } from "./parseAutocompleteResponse.js"
  * @param {String} string
  * @returns {Array|false}
  */
-export const getAutocompleteList = (string: string): Promise<Promise<Array<any>> | false> | false => {
-    string = string.trim()
+export const getAutocompleteList = async (string: string | undefined): Promise<string[] | false>  => {
+    if (string) string = string.trim()
 
-    return string ? processAutocompleteQuery(string) : false
+    return string ? await processAutocompleteQuery(string) : false
 }
 
 /**
@@ -29,7 +29,7 @@ export const getAutocompleteList = (string: string): Promise<Promise<Array<any>>
  * @param {String} string
  * @returns {Array}
  */
-const processAutocompleteQuery = async (string: string): Promise<Promise<Array<any>> | false> => {
+const processAutocompleteQuery = async (string: string): Promise<string[] | false> => {
     const response = await autocompleteQuery(string)
 
     if (response) {
