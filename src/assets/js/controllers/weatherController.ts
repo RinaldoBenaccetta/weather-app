@@ -1,7 +1,6 @@
 import { APPLICATION } from "../models/application.js"
 import { getWeather } from "../models/weather/getWeather.js"
 import { showTodayWeather } from "../views/todayCards/showTodayWeather.js"
-import { removeWeatherTitle } from "../views/weatherTitle/removeWeatherTitle.js"
 import { classTimeout } from "../utils/classTimeout.js"
 import { showWeatherTitle } from "../views/weatherTitle/showWeatherTitle.js"
 import { hideAutocomplete } from "../views/autocomplete/hideAutocomplete.js"
@@ -10,6 +9,8 @@ import { emptySearchInput } from "../utils/emptySearchInput.js"
 
 import { Location } from "../types/location"
 import { WeatherCollection } from "../types/weatherCollection";
+import {removeElementContent} from "../utils/removeElementContent";
+import {ELEMENTS} from "../models/elements";
 
 /**
  * Get weather for next 24hours according to provided city or according
@@ -35,7 +36,8 @@ const WeatherReturn = (weatherCollection: WeatherCollection): void => {
     removeAutocompleteContent()
     hideAutocomplete()
 
-    removeWeatherTitle()
+    removeElementContent(ELEMENTS.weatherTitleContainer)
+
     // call the weather title view
     showWeatherTitle(weatherCollection.city)
     // call the today weather view
